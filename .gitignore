@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+.swc/
+.taro/
+project.private.config.json
+.env.local
+artifacts/
+*.log

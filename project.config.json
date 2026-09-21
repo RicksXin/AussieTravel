@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "dist/weapp/",
+  "projectname": "aussie-travel",
+  "description": "澳游 · 澳洲旅行口袋",
+  "appid": "wx1784519777e674b5",
+  "compileType": "miniprogram",
+  "setting": { "urlCheck": true, "es6": false, "enhance": false, "postcss": false, "minified": true },
+  "condition": {}
+}

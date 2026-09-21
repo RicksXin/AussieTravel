@@ -1,0 +1,135 @@
+/* Phone-first type sizes and contrast; text stays native on WeChat. */
+.app-shell {
+  color: #243c32;
+  font-size: 15px;
+}
+
+.page-subtitle,
+.section-subtitle,
+.muted,
+.event-note,
+.event-place,
+.time-hint,
+.next-caption,
+.next-info,
+.overview-subtitle,
+.overview-bottom,
+.feature-description,
+.issue-text,
+.modal-intro,
+.original-text,
+.source-disclaimer {
+  color: #526457;
+}
+
+.eyebrow,
+.hero-tag,
+.day-label,
+.overview-top,
+.row-number,
+.footer {
+  color: #576b58;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+}
+
+.topbar { font-size: 13px; }
+.top-muted, .top-divider { color: #596a5f; }
+.avatar { color: #63513c; font-size: 11px; }
+.page-heading { gap: 8px; }
+.page-heading > view:first-child { flex: 1; min-width: 0; }
+.page-title { font-size: 24px; letter-spacing: 0; white-space: normal; }
+.page-subtitle { font-size: 12px; line-height: 1.7; }
+
+.hero { height: 285px; }
+.scenery { opacity: 1; }
+.hero-title { color: #244d3d; font-size: 30px; font-weight: 600; }
+.hero-tag { color: #4e654e; font-size: 10px; }
+.hero-description { color: #405a45; font-size: 14px; line-height: 1.75; }
+.hero-meta { color: #3d583f; font-size: 11px; gap: 12px; margin-top: 18px; }
+
+.day { min-width: 74px; padding: 12px 10px 10px; }
+.day-label { font-size: 11px; }
+.day-date { font-size: 21px; font-weight: 600; color: #304f38; }
+.day-city { font-size: 12px; color: #526347; }
+.day.active .day-label, .day.active .day-city { color: #f0f7f0; }
+.day-dot { background: #8b9e7c; }
+
+.next-card .eyebrow { color: #42623b; font-size: 12px; }
+.countdown { font-size: 32px; font-weight: 600; }
+.unit { color: #465e40; font-size: 13px; }
+.next-caption { font-size: 12px; }
+.next-info { font-size: 12px; max-width: 145px; }
+.next-title { color: #2e5037; font-size: 14px; font-weight: 600; }
+.button, .next-button, .export-button { font-size: 14px; min-height: 44px; }
+.button.dark { color: #fff; font-weight: 500; }
+.button .icon { width: 17px; height: 17px; }
+.mini-title { font-size: 14px; font-weight: 500; }
+.progress-card .muted { font-size: 12px; color: #526457; }
+.progress { height: 5px; margin: 11px 0; }
+.progress-fill { background: #507b4a; }
+
+.section-title { font-size: 23px; }
+.section-subtitle { font-size: 13px; line-height: 1.7; }
+.date-circle { color: #3d5b33; font-size: 20px; width: 46px; height: 53px; }
+.month { font-size: 11px; color: #526347; }
+.filters .ui-button { color: #526746; font-size: 13px; min-height: 40px; }
+.filters .chosen { color: #31522d; font-weight: 600; }
+.text-button, .original-button { color: #356440; font-size: 13px; }
+.search-field .icon { width: 17px; height: 17px; opacity: 1; }
+.search-field input { font-size: 14px; height: 40px; color: #304d36; }
+.search-field input::placeholder { color: #677662; }
+
+.event-time { width: 54px; }
+.event:before { left: 71px; }
+.time-value { font-size: 15px; font-weight: 600; }
+.time-hint { font-size: 11px; line-height: 1.5; white-space: normal; }
+.event-title { font-size: 16px; font-weight: 600; line-height: 1.6; }
+.event-note { font-size: 14px; line-height: 1.75; }
+.event-place { font-size: 11px; }
+.type { font-size: 11px; font-weight: 500; }
+.flight { color: #3f5e79; }
+.transit { color: #49633c; }
+.hotel { color: #755b37; }
+.food { color: #8b5430; }
+.spot { color: #3f695b; }
+.shop { color: #705577; }
+.optional { font-size: 11px; color: #716343; }
+.finished-label { font-size: 11px; color: #406738; }
+.navigate { font-size: 12px; color: #37653e; min-height: 40px; }
+.navigate .icon { width: 15px; height: 15px; }
+.complete-button { width: 36px; height: 36px; color: #64795a; border-color: #829776; }
+.completed .event-title { color: #596f4e; }
+.event-actions { padding: 7px 11px; }
+
+.bottom-tab { font-size: 12px; color: #526356; font-weight: 500; }
+.bottom-tab .icon { opacity: 1; width: 22px; height: 22px; }
+.bottom-tab.selected { color: #24594d; font-weight: 600; }
+.bottom-nav { background: #fff; height: calc(74px + env(safe-area-inset-bottom)); }
+.main { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+
+.muted { font-size: 13px; line-height: 1.8; }
+.route-line { color: #3e603c; font-size: 14px; }
+.route-overview .muted, .packing-summary .muted { font-size: 12px; }
+.overview-top { font-size: 11px; letter-spacing: 0; }
+.overview-title { font-size: 16px; font-weight: 600; }
+.overview-subtitle, .overview-bottom { font-size: 13px; }
+.check-row { font-size: 15px; color: #435b38; }
+.check-row.checked > text { color: #697b5b; }
+.check-box { width: 21px; height: 21px; border-color: #829875; }
+.group-title { font-size: 16px; }
+.feature-title { font-size: 17px; font-weight: 600; }
+.feature-description, .issue-text { font-size: 14px; line-height: 1.8; }
+.issue-title { font-size: 15px; font-weight: 600; }
+.issue-date { color: #795b32; font-size: 11px; }
+.subscription-note { color: #58634e; font-size: 13px; }
+.subscription-note .muted { font-size: 12px; }
+.source-disclaimer { font-size: 12px; }
+.modal-intro, .original-text { font-size: 15px; line-height: 1.85; }
+.original-title { font-size: 15px; font-weight: 600; }
+.edit-time .muted { font-size: 13px; }
+.time-picker { font-size: 15px; color: #49633d; min-height: 46px; }
+.time-picker text { color: #31552d; }
+.close-modal { width: 38px; height: 38px; color: #365e40; }
+.footer text:last-child { font-size: 11px; }
+.empty { color: #54684b; font-size: 14px; }
