@@ -1,0 +1,365 @@
+[
+  {
+    "place": "Bar Totti’s · Sydney CBD",
+    "source": "https://www.xiaohongshu.com/explore/6999687c000000000a03ee55",
+    "author": "箭小小",
+    "title": "悉尼周杰伦同款｜最好吃的一顿Totti’s（菜单）",
+    "checkedAt": "2026-09-21",
+    "recommendations": [
+      "Wood fired bread · 柴火烤饼",
+      "Burrata · 布拉塔奶酪"
+    ],
+    "notes": "笔记推荐烤饼趁热与奶酪搭配；正文确认门店在 330A/330B George St。封面也有提拉米苏照片。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/bar-tottis-cover.jpg",
+        "index": 1,
+        "caption": "门店、烤饼、Burrata 与提拉米苏拼图",
+        "kind": "collage"
+      }
+    ],
+    "status": "已读正文并核对封面，下载网站提供的参考图；其余 9 张未逐张核对"
+  },
+  {
+    "place": "Palermo Melbourne",
+    "source": "https://www.xiaohongshu.com/explore/6a6be0520000000008009c00",
+    "author": "San Telmo Group",
+    "title": "墨尔本牛排控，一定要收藏这家‼️",
+    "checkedAt": "2026-09-21",
+    "recommendations": [
+      "阿根廷炭火牛排（具体部位沿用原攻略点单清单）"
+    ],
+    "notes": "该账号介绍 Asado 与 Parrilla 炭火烤制、放牧牛肉及分享式用餐。图片未标明具体牛排部位，不将它直接标成 Ojo de Bife。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/palermo-steak.jpg",
+        "index": 1,
+        "caption": "炭火牛排 · 部位未标明",
+        "kind": "dish"
+      }
+    ],
+    "status": "已读正文并核对封面，共 5 张图"
+  },
+  {
+    "place": "Rockpool Bar & Grill Sydney",
+    "source": "https://www.xiaohongshu.com/explore/69b3d920000000001a032184",
+    "author": "悉尼在逃短尾矮袋鼠",
+    "title": "🇦🇺悉尼｜留子三刷的餐厅Rockpool🥩",
+    "checkedAt": "2026-09-21",
+    "recommendations": [
+      "XO 酱烤扇贝",
+      "烤虾",
+      "Rump / Skirt 牛排"
+    ],
+    "notes": "口味评价来自作者个人体验：扇贝带微辣、烤虾咸鲜略酸；作者认为骨髓偏咸、烟熏味重。牛排参考图标明 Rib eye & Skirt、Rump & Fillet、Rib Eye on the Bone 800g，不等同于当前菜单或用户已选部位。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/rockpool-steaks.jpg",
+        "index": 3,
+        "caption": "牛排部位对照拼图",
+        "kind": "collage"
+      }
+    ],
+    "status": "已核对第 1–3 张图，共 4 张；保存第 3 张"
+  },
+  {
+    "place": "Apollo Bay Seafood Cafe",
+    "source": "https://www.xiaohongshu.com/explore/68d89787000000001203f138",
+    "author": "Abby梦想环游世界🥕",
+    "title": "阿波罗湾美食推荐｜Apollo Bay Seafood Cafe",
+    "checkedAt": "2026-09-21",
+    "recommendations": [
+      "海鲜拼盘",
+      "虾仁意面"
+    ],
+    "notes": "作者推荐海鲜拼盘、生蚝和虾仁面。仅作为 Apollo Bay 午餐备选，不与 Fishermen’s Co-op 混用图片。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/apollo-seafood.jpg",
+        "index": 1,
+        "caption": "海鲜拼盘、意面与烤虾拼图",
+        "kind": "collage"
+      }
+    ],
+    "status": "已读正文并核对第 1 张图，共 10 张"
+  },
+  {
+    "place": "The Hungry Monkey Kiama",
+    "source": "https://www.xiaohongshu.com/explore/69e7331900000000210396ff",
+    "author": "冰淇淋肉松麻薯包",
+    "title": "🇦🇺｜The Hungry Monkey Kiama杀汉堡🔪",
+    "checkedAt": "2026-09-21",
+    "recommendations": [
+      "肉酱薯条（作者中文称呼）",
+      "Bad Boy 汉堡",
+      "Acai bowl"
+    ],
+    "notes": "作者最推荐薯条，描述为芝士浓郁、有脆培根；Bad Boy 含培根。正文地址 5/32 Collins St, Kiama。保留为午餐备选，用户原攻略 Royale 等菜名不被覆盖。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/kiama-fries.jpg",
+        "index": 1,
+        "caption": "肉酱薯条近景 · 笔记作者称呼",
+        "kind": "dish"
+      }
+    ],
+    "status": "已读正文、核对并下载封面"
+  },
+  {
+    "place": "Kiama Blowhole",
+    "source": "https://www.xiaohongshu.com/explore/6a9abbc6000000002803a967",
+    "author": "老天猫啊",
+    "title": "Kiama→Gerringong→Minnamurra一日游结算",
+    "checkedAt": "2026-09-21",
+    "notes": "正文分别指出 Kiama Blowhole、Tasman Dr、Minnamurra Whale Watching Platform。作者这次未拍到完整心形，不能承诺心形效果；公共交通与时刻不并入现有自驾行程。",
+    "photographySuggestion": "在开放草地以灯塔为背景，人物放在塔旁，留出天空。",
+    "suggestionOrigin": "根据图像整理的构图建议，非原笔记逐字内容；图片本身为风景参考",
+    "images": [
+      {
+        "file": "xiaohongshu-images/kiama-lighthouse.jpg",
+        "index": 1,
+        "caption": "灯塔与草地低角度构图",
+        "kind": "landscape"
+      }
+    ],
+    "status": "正文和三张图片均已核对并下载"
+  },
+  {
+    "place": "Gerringong · Tasman Dr",
+    "source": "https://www.xiaohongshu.com/explore/6a9abbc6000000002803a967",
+    "author": "老天猫啊",
+    "title": "Kiama→Gerringong→Minnamurra一日游结算",
+    "checkedAt": "2026-09-21",
+    "notes": "正文分别指出 Kiama Blowhole、Tasman Dr、Minnamurra Whale Watching Platform。作者这次未拍到完整心形，不能承诺心形效果；公共交通与时刻不并入现有自驾行程。",
+    "photographySuggestion": "从人行道利用起伏街道和海湾构图，人物侧身走动。",
+    "suggestionOrigin": "根据图像整理的构图建议，非原笔记逐字内容；图片本身为风景参考",
+    "images": [
+      {
+        "file": "xiaohongshu-images/gerringong-street.jpg",
+        "index": 2,
+        "caption": "街道下坡与远处海湾",
+        "kind": "landscape"
+      }
+    ],
+    "status": "正文和三张图片均已核对并下载"
+  },
+  {
+    "place": "Minnamurra",
+    "source": "https://www.xiaohongshu.com/explore/6a9abbc6000000002803a967",
+    "author": "老天猫啊",
+    "title": "Kiama→Gerringong→Minnamurra一日游结算",
+    "checkedAt": "2026-09-21",
+    "notes": "正文分别指出 Kiama Blowhole、Tasman Dr、Minnamurra Whale Watching Platform。作者这次未拍到完整心形，不能承诺心形效果；公共交通与时刻不并入现有自驾行程。",
+    "photographySuggestion": "从观景草地拍河口、沙洲与天空，人物背影放在画面边侧。",
+    "suggestionOrigin": "根据图像整理的构图建议，非原笔记逐字内容；图片本身为风景参考",
+    "images": [
+      {
+        "file": "xiaohongshu-images/minnamurra-coast.jpg",
+        "index": 3,
+        "caption": "日落时的河口沙洲",
+        "kind": "landscape"
+      }
+    ],
+    "status": "正文和三张图片均已核对并下载"
+  },
+  {
+    "place": "Bald Hill Lookout",
+    "source": "https://www.xiaohongshu.com/explore/695655970000000022022195",
+    "author": "阿牛",
+    "title": "南天寺周边的——-bald hill look out 攻略",
+    "checkedAt": "2026-09-21",
+    "notes": "正文定位 Bald Hill Lookout，1 Otford Rd, Stanwell Tops。只提取观景台海岸构图，不采纳其未经核实的历史/道路名称描述。",
+    "photographySuggestion": "从开放观景台拍摄海岸曲线，前景保留少量草地，人物侧身看海。",
+    "suggestionOrigin": "根据风景照片整理的建议，原图无人像",
+    "images": [
+      {
+        "file": "xiaohongshu-images/bald-hill.jpg",
+        "index": 4,
+        "caption": "Bald Hill 海岸曲线",
+        "kind": "landscape"
+      }
+    ],
+    "status": "已核对前 4 张图，保存第 4 张"
+  },
+  {
+    "place": "Sea Cliff Bridge",
+    "source": "https://www.xiaohongshu.com/explore/6a8cdd55000000002b00fb57",
+    "author": "叮当的学游记",
+    "title": "悉尼周边｜一边悬崖一边大海的海上大桥",
+    "checkedAt": "2026-09-21",
+    "notes": "正文提及桥面人行道，但 3 张照片均为非正式山坡野径视角。与应用当前桥面步道方案不匹配，不作应用推荐机位图。",
+    "images": [],
+    "status": "已检索并排除当前图片；仍缺桥面步道实拍"
+  },
+  {
+    "place": "Sydney Opera House · Opera Bar",
+    "source": "https://www.xiaohongshu.com/explore/69d8cd35000000001a02a8f5",
+    "author": "婷妞的旅行日记",
+    "title": "📸8个拍悉尼歌剧院的惊艳机位大整理🗺️",
+    "checkedAt": "2026-09-21",
+    "notes": "正文标注 P1–4 为 Opera Bar，P16 为皇家植物园。植物园图未给出精确 GPS；不将整套北悉尼路线添加到用户原行程。",
+    "photographySuggestion": "侧坐在长椅上，肩膀放松，头微侧向光；用椅背曲线引向歌剧院。",
+    "suggestionOrigin": "根据已核对的人像图片整理",
+    "images": [
+      {
+        "file": "xiaohongshu-images/opera-pose.jpg",
+        "index": 1,
+        "caption": "Opera Bar 一侧长椅坐姿",
+        "kind": "pose"
+      }
+    ],
+    "status": "正文及第 1、2、16 张图片已核对；保存第 1 与 16 张"
+  },
+  {
+    "place": "Royal Botanic Garden Sydney",
+    "source": "https://www.xiaohongshu.com/explore/69d8cd35000000001a02a8f5",
+    "author": "婷妞的旅行日记",
+    "title": "📸8个拍悉尼歌剧院的惊艳机位大整理🗺️",
+    "checkedAt": "2026-09-21",
+    "notes": "正文标注 P1–4 为 Opera Bar，P16 为皇家植物园。植物园图未给出精确 GPS；不将整套北悉尼路线添加到用户原行程。",
+    "photographySuggestion": "站在滨水步道护栏内，身体微侧、双手自然放口袋，视线望向一旁，留出歌剧院和海港大桥。",
+    "suggestionOrigin": "根据已核对的人像图片整理",
+    "images": [
+      {
+        "file": "xiaohongshu-images/botanic-pose.jpg",
+        "index": 16,
+        "caption": "植物园滨水处站姿与海港合影",
+        "kind": "pose"
+      }
+    ],
+    "status": "正文及第 1、2、16 张图片已核对；保存第 1 与 16 张"
+  },
+  {
+    "place": "Bondi Beach · South Bondi",
+    "source": "https://www.xiaohongshu.com/explore/6aa7e3c40000000028003348",
+    "author": "睡美人安安",
+    "title": "存一些悉尼🏖️Bondibeach拍照姿势",
+    "checkedAt": "2026-09-21",
+    "notes": "正文定位 South Bondi Beach, Campbell Pde 车站附近，两棵树之间的海岸视角；树荫影响脸部光线。",
+    "photographySuggestion": "站在栏杆内侧，身体微侧，抬手轻扶头发或自然垂手；树木作为两边框景，海滩曲线完整留在背景。",
+    "suggestionOrigin": "根据拼图中人像动作整理，不采用坐跨护栏的动作",
+    "images": [
+      {
+        "file": "xiaohongshu-images/bondi-poses.jpg",
+        "index": 1,
+        "caption": "South Bondi 多种站姿参考拼图",
+        "kind": "pose"
+      }
+    ],
+    "status": "正文与封面拼图已核对并下载"
+  },
+  {
+    "place": "St Mary's Cathedral Sydney",
+    "source": "https://www.xiaohongshu.com/explore/69a36c7b0000000022021bb2",
+    "author": "小葵",
+    "title": "悉尼圣玛丽大教堂打卡⛪",
+    "checkedAt": "2026-09-21",
+    "notes": "封面拼图包含教堂立面、室内及长椅合影。使用室外长椅构图；室内是否可拍按现场规则。",
+    "photographySuggestion": "在教堂旁长椅自然侧坐，双手放腿上，人物置于画面一侧，保留尖塔轮廓。",
+    "suggestionOrigin": "根据已核对的人像拼图整理，未确认具体长椅坐标",
+    "images": [
+      {
+        "file": "xiaohongshu-images/cathedral-poses.jpg",
+        "index": 1,
+        "caption": "圣玛丽教堂建筑与长椅坐姿拼图",
+        "kind": "pose"
+      }
+    ],
+    "status": "已核对正文和封面并下载"
+  },
+  {
+    "place": "Art Gallery of New South Wales",
+    "source": "https://www.xiaohongshu.com/explore/69a78472000000001b01cc65",
+    "author": "小嘟嘟📷",
+    "title": "悉尼陪拍｜南半球最美美术馆🇦🇺🎨daily🦘",
+    "checkedAt": "2026-09-21",
+    "notes": "作者拍摄的新州美术馆室内人像。展厅与作品可能变化，以现场展陈和拍摄规则为准。",
+    "photographySuggestion": "在允许拍摄的展厅，侧身看画或在座椅上自然侧坐；人物与画框错开，保留画框完整边缘。",
+    "suggestionOrigin": "根据已核对的拼图整理",
+    "images": [
+      {
+        "file": "xiaohongshu-images/nsw-gallery-poses.jpg",
+        "index": 1,
+        "caption": "新州美术馆看画站姿与座椅坐姿",
+        "kind": "pose"
+      }
+    ],
+    "status": "已读正文并核对封面，共 5 张，保存封面"
+  },
+  {
+    "place": "Fitzroy · Johnston St",
+    "source": "https://www.xiaohongshu.com/explore/6a86ea2c000000001d01c7c1",
+    "author": "Kitty酱📷",
+    "title": "墨尔本Fitzroy出片点位分享",
+    "checkedAt": "2026-09-21",
+    "notes": "正文定位 Johnston St 的复古街区。属于 Fitzroy 街区延伸，不与 Fitzroy Gardens 混淆。",
+    "photographySuggestion": "在人行道上以复古店面为背景，侧身回头或轻扶头发；相机略低于眼睛，保留街道纵深。",
+    "suggestionOrigin": "根据封面人物动作整理，选择人行道位置",
+    "images": [
+      {
+        "file": "xiaohongshu-images/fitzroy-poses.jpg",
+        "index": 1,
+        "caption": "Fitzroy 街区回头与站姿拼图",
+        "kind": "pose"
+      }
+    ],
+    "status": "正文和第 1 张拼图已核对并下载；共 18 张"
+  },
+  {
+    "place": "Queen Victoria Market",
+    "source": "https://www.xiaohongshu.com/explore/6a900ebd000000002003e3ed",
+    "author": "here_",
+    "title": "🇦🇺维多利亚女皇市场好逛好拍🧺",
+    "checkedAt": "2026-09-21",
+    "notes": "封面为市场面包店橱窗旁的街拍，店铺编号可见 66–68。正文未提供具体店名，不额外虚构。",
+    "photographySuggestion": "站在橱窗侧边，手持咖啡、身体微侧、视线看向店铺；以面包陈列和窗框作背景。",
+    "suggestionOrigin": "根据已核对的人像照片整理",
+    "images": [
+      {
+        "file": "xiaohongshu-images/queen-market-pose.jpg",
+        "index": 1,
+        "caption": "维妈市场橱窗旁手持咖啡站姿",
+        "kind": "pose"
+      }
+    ],
+    "status": "已核对正文和第 1 张图，共 12 张，保存封面"
+  },
+  {
+    "place": "Royal Arcade Melbourne",
+    "source": "https://www.xiaohongshu.com/explore/690702b30000000005010f50",
+    "author": "Net_Z",
+    "title": "墨尔本｜Royal Arcade",
+    "checkedAt": "2026-09-21",
+    "notes": "第 1 张为拱廊纵深，第 2 张为 Dungeon of Magic 楼梯旁回头姿势；不采用正文未经核实的建筑年数。",
+    "photographySuggestion": "楼梯侧面站定，身体朝前、头轻轻回看镜头；从略高位置取景，让栏杆形成对角线。按店铺开放范围拍摄。",
+    "suggestionOrigin": "根据第 2 张已核对人像整理",
+    "images": [
+      {
+        "file": "xiaohongshu-images/royal-arcade-pose.jpg",
+        "index": 2,
+        "caption": "皇家拱廊楼梯旁回头姿势",
+        "kind": "pose"
+      }
+    ],
+    "status": "正文及第 1–2 张图已核对，保存第 2 张；共 3 张"
+  },
+  {
+    "place": "Monash University Caulfield Campus",
+    "source": "https://www.xiaohongshu.com/explore/6976a16a000000002103d95e",
+    "author": "Gimme Melbourne",
+    "title": "10年回访｜莫纳什Caulfield 现在真的好拍！",
+    "checkedAt": "2026-09-21",
+    "notes": "正文提及图书馆天井与校园公共休息区。教学楼、图书馆可进入范围和开放时间未作官方验证，不承诺可入内。",
+    "photographySuggestion": "图书馆若开放可抬头拍天井的对称线条；户外回访合影可选公共休息区，在建筑线条旁自然站立。",
+    "suggestionOrigin": "天井构图来自已核对图片，户外站姿为整理建议，非原图姿势",
+    "images": [
+      {
+        "file": "xiaohongshu-images/monash-caulfield.jpg",
+        "index": 2,
+        "caption": "Caulfield 图书馆天井对称构图",
+        "kind": "architecture"
+      }
+    ],
+    "status": "正文与第 1–2 张图已核对，保存第 2 张；共 18 张"
+  }
+]

@@ -6,6 +6,12 @@ module.exports = {
   deviceRatio: { 390: 750 / 390, 640: 2.34 / 2, 750: 1, 828: 1.81 / 2 },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV || 'weapp'}`,
+  copy: {
+    patterns: [{
+      from: `src/guide-media/${process.env.TARO_ENV === 'h5' ? 'h5' : 'weapp'}`,
+      to: `dist/${process.env.TARO_ENV || 'weapp'}/guide-media`
+    }]
+  },
   framework: 'react',
   compiler: 'webpack5',
   plugins: ['@tarojs/plugin-platform-weapp', '@tarojs/plugin-platform-h5'],

@@ -1,0 +1,44 @@
+{
+  "sourceUrl": "https://www.google.com/maps/d/edit?mid=1sNhIqj_Yoy9DxRyMZ-uAKwByWGtHQyY",
+  "importedAt": "2026-09-21",
+  "sourceLayer": "9月26日",
+  "coordinateSystem": "WGS84",
+  "hotelAddressSource": "https://www.oakshotels.com/en/oaks-on-william/contact",
+  "places": {
+    "Melbourne Airport Terminal 2": {
+      "name": "Terminal 2 - International",
+      "latitude": -37.668997,
+      "longitude": 144.8483656
+    },
+    "Oaks Melbourne on William Suites": {
+      "name": "350 William St",
+      "latitude": -37.8113082,
+      "longitude": 144.9564577
+    },
+    "Operator25 Melbourne": {
+      "name": "Operator25",
+      "latitude": -37.8106796,
+      "longitude": 144.9569892
+    },
+    "Overlay Coffee Melbourne": {
+      "name": "Overlay Coffee",
+      "latitude": -37.8115782,
+      "longitude": 144.9602798
+    },
+    "Lune Croissanterie Melbourne CBD on Lonsdale": {
+      "name": "Lune Croissanterie Melbourne CBD on Lonsdale",
+      "latitude": -37.8146582,
+      "longitude": 144.952673
+    },
+    "Max on Hardware Melbourne": {
+      "name": "Max on Hardware",
+      "latitude": -37.8133738,
+      "longitude": 144.9612479
+    },
+    "St Kilda Pier Melbourne": {
+      "name": "St Kilda Pier",
+      "latitude": -37.8647544,
+      "longitude": 144.9659159
+    }
+  }
+}

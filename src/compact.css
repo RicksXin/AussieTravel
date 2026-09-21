@@ -1,0 +1,70 @@
+/* Compact itinerary header shared by H5 and the custom WeChat navigation. */
+.travel-header { position: relative; overflow: hidden; background: #eaeede; }
+.header-coast { position: absolute; right: 0; top: 0; width: 100%; height: 100%; opacity: .7; }
+.header-wash { position: absolute; inset: 0; background: linear-gradient(90deg, #eaeede 8%, rgba(234,238,222,.92) 40%, rgba(234,238,222,.15)); }
+.travel-nav, .header-summary, .travel-header .day-scroll { position: relative; z-index: 1; }
+.travel-nav { display: flex; align-items: center; padding-left: 20px; box-sizing: border-box; }
+.travel-brand { color: #24594d; font-size: 17px; font-weight: 600; white-space: nowrap; }
+.travel-brand-en { font-size: 10px; letter-spacing: 1px; margin-left: 6px; }
+.header-summary { display: flex; align-items: center; justify-content: space-between; padding: 6px 20px 14px; }
+.header-title { display: block; font-size: 26px; font-weight: 600; color: #244d3d; line-height: 1.3; }
+.header-caption { display: block; margin-top: 5px; color: #526457; font-size: 12px; }
+.travel-header .day-scroll { display: block; width: 100%; margin: 0; }
+.travel-header .day-strip { display: inline-flex; padding: 0 20px 14px; gap: 0; }
+.travel-header .day { width: 60px; min-width: 60px; flex: 0 0 60px; margin-right: 8px; padding: 8px 4px; gap: 0; border-radius: 12px; background: rgba(255,255,255,.8); border: 1px solid rgba(36,89,77,.1); }
+.travel-header .day:last-child { margin-right: 0; }
+.travel-header .day-date { font-size: 16px; line-height: 21px; font-weight: 600; letter-spacing: 0; }
+.travel-header .day-city { margin-top: 3px; font-size: 11px; line-height: 16px; }
+.travel-header .day.active { background: #24594d; border-color: #24594d; box-shadow: 0 3px 8px rgba(36,89,77,.14); }
+.page { padding: 16px 16px 0; }
+.content-grid { display: block; }
+.section-heading { padding-bottom: 10px; align-items: flex-start; }
+.section-heading .eyebrow { display: none; }
+.section-title { font-size: 20px; margin: 0 0 4px; line-height: 1.4; }
+.section-subtitle { font-size: 12px; line-height: 1.65; }
+.day-progress { flex-shrink: 0; padding: 5px 8px; margin-left: 8px; color: #526457; background: #eaf0e1; border-radius: 8px; font-size: 11px; }
+.timeline-toolbar { padding-top: 7px; gap: 8px; }
+.filters .ui-button { min-height: 34px; padding: 6px 8px; font-size: 12px; }
+.original-button { font-size: 12px; }
+.search-field { margin: 5px 0 12px; padding: 0 9px; border-radius: 8px; background: #edf1e8; }
+.search-field input { height: 34px; font-size: 12px; }
+.event { gap: 6px; padding-bottom: 12px; }
+.event-time { width: 45px; }
+.event:before { left: 60px; }
+.time-value { font-size: 13px; }
+.time-hint { font-size: 10px; }
+.event-open { padding: 10px 11px 8px; }
+.event-tags { margin-bottom: 4px; gap: 6px; }
+.type { padding: 2px 5px; font-size: 10px; }
+.event-title { font-size: 15px; line-height: 1.5; }
+.event-note { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: 12px; line-height: 1.6; margin-top: 4px; }
+.event-actions { padding: 4px 9px; }
+.navigate { min-height: 32px; }
+.upcoming-strip { display: flex; align-items: center; gap: 8px; margin-top: 10px; padding: 12px; border-radius: 10px; background: #eaf0e1; color: #3d5b43; font-size: 12px; }
+.upcoming-strip > text { flex: 1; }
+.upcoming-strip > text:last-child { flex: 0; }
+
+.restaurant-section { margin-top: 22px; padding-top: 20px; border-top: 1px solid #e4e9de; }
+.dish-section-title { display: block; color: #244d3d; font-size: 20px; font-weight: 600; }
+.dish-source { display: block; margin: 7px 0 12px; font-size: 11px; line-height: 1.7; color: #748173; }
+.dish-list { padding: 3px 14px; background: #f3f5ed; border-radius: 14px; }
+.dish-row { display: flex; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #e3e8dc; }
+.dish-row:last-child { border-bottom: 0; }
+.dish-index { flex-shrink: 0; width: 28px; font-size: 11px; color: #839077; }
+.dish-name { font-size: 14px; color: #294d3d; line-height: 1.6; overflow-wrap: anywhere; }
+.dish-photo-heading { display: flex; justify-content: space-between; align-items: center; margin: 22px 0 12px; font-size: 16px; font-weight: 600; color: #294d3d; }
+.dish-photo-hint { font-size: 11px; font-weight: 400; color: #748173; }
+.dish-photo-card { margin-bottom: 14px; }
+.dish-photo { display: block; width: 100%; border-radius: 12px; background: #edf1e8; }
+.dish-photo-caption { display: block; margin-top: 7px; font-size: 11px; line-height: 1.6; color: #748173; }
+.dish-empty, .dish-photo-fallback { display: block; padding: 18px 14px; margin-top: 12px; border-radius: 12px; background: #f3f5ed; color: #748173; font-size: 12px; line-height: 1.7; }
+
+.spot-guide { margin-top: 22px; padding-top: 20px; border-top: 1px solid #e4e9de; }
+.pose-grid { display: flex; flex-wrap: wrap; margin: 0 -5px; }
+.pose-card { width: 50%; padding: 0 5px 14px; box-sizing: border-box; }
+.pose-card .dish-photo-card { margin-bottom: 6px; }
+.pose-card .dish-photo-caption { color: #294d3d; font-size: 14px; font-weight: 600; }
+.pose-tip { display: block; font-size: 12px; color: #6c7969; line-height: 1.7; }
+
+.dish-recommendation { display: block; margin-top: 12px; padding: 12px 14px; background: #f3f5ed; border-radius: 12px; font-size: 13px; line-height: 1.8; color: #526457; }
+.photo-source{display:block;margin-top:6px;font-size:11px;line-height:1.6;color:#688273;overflow-wrap:anywhere}

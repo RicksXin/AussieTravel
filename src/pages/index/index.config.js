@@ -1,1 +1,1 @@
-export default definePageConfig({ navigationBarTitleText: '澳游 · AUSSIE DAYS' })
+export default definePageConfig({ navigationBarTitleText: '澳游 · AUSSIE DAYS', navigationStyle: 'custom', navigationBarTextStyle: 'black' })

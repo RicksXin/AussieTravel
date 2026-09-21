@@ -1,95 +1,988 @@
-const event=(time,title,type,place,note,row,extra={})=>({time,title,type,place,note,row,...extra});
-export const days=[
-{date:'2026-09-25',city:'上海 → 吉隆坡',en:'THE JOURNEY BEGINS',title:'出发，去南半球',subtitle:'整理好期待，向澳洲出发。',zone:'Asia/Shanghai',offset:'+08:00',range:[8,18],events:[
-event('12:30','出发前往浦东机场 T2','transit','上海浦东国际机场 T2','4 号线转 2 号线；计划耗时 1.5 小时。',12),
-event(null,'值机与安检','flight','上海浦东国际机场 T2','核对证件、行李与登机口，以航空公司要求为准。',13),
-event('15:25','上海 → 吉隆坡','flight','上海浦东国际机场 T2','原计划 15:25–21:00，浦东 T2 → 吉隆坡 T1。',14),
-event('22:25','吉隆坡 → 墨尔本','flight','Kuala Lumpur International Airport Terminal 1','原计划次日 08:20 抵达墨尔本 T2；准备入境卡与笔。入境卡上的酒店地址需核对。',15)]},
-{date:'2026-09-26',city:'墨尔本',en:'HELLO, MELBOURNE',title:'在墨尔本，慢慢着陆',subtitle:'一杯咖啡，一场海边日落。旅程从这里开始。',zone:'Australia/Melbourne',offset:'+10:00',range:[19,81],events:[
-event('08:20','抵达墨尔本 · T2','flight','Melbourne Airport Terminal 2','准备护照、签证、机酒确认单、入境卡；入境后领取行李。',21),
-event('10:30','搭乘 SkyBus 进入市区','transit','Southern Cross Station Melbourne','计划 10:30–11:00 到南十字星站，原表预计 35 分钟。下车后步行前往酒店。',32),
-event('13:00','到酒店，寄存行李','hotel','Oaks Melbourne on William Suites','墨尔本威廉姆街盛橡套房酒店。原表 15:00 入住、11:00 离店；提前入住需酒店确认。',36),
-event(null,'午餐 · Operator25 与备选','food','Operator25 Melbourne','首选 Operator25：软壳蟹煎蛋、紫薯华夫饼。备选 Snow Monkey Ramen、Phở Tùng、Pho Thin 等，完整菜单见原计划。',43),
-event(null,'咖啡与可颂的小停留','food','Overlay Coffee Melbourne','Overlay 花生酱拿铁；Lune 杏仁可颂。按当天精力选择。',51),
-event(null,'办理入住，休息一下','hotel','Oaks Melbourne on William Suites','收拾行李、洗澡、换装。原表入住时间为 15:00，未给此项具体安排时间。',57),
-event('16:40','向 St Kilda 海边出发','transit','St Kilda Pier Melbourne','原计划 16:40–17:00。电车或打车，具体交通路线需出发时核对。',61),
-event('17:00','St Kilda Pier · 看海与日落','spot','St Kilda Pier Melbourne','海边拍照，记得带外套。原表日落时间未核实。企鹅场次 18:30 / 19:30 与晚餐可能冲突。',64),
-event(null,'企鹅归巢 · 可选活动','spot','St Kilda Pier Melbourne','表内记录两场 18:30–19:30 / 19:30–20:30，需预约并与晚餐二选一。',65,{optional:true}),
-event('19:00','晚餐 · Max on Hardware','food','Max on Hardware Melbourne','原表标注 19:00 预约、无取消政策。推荐袋鼠肉、五花肉、海鲜烩饭；以实际确认单为准。',70),
-event(null,'超市补给，回酒店','shop','Coles Melbourne CBD','买水、牛奶、酸奶与零食；伴手礼主要留在悉尼采购。',75)]},
-{date:'2026-09-27',city:'墨尔本',en:'WANDER THE CITY',title:'把城市，走成风景',subtitle:'从热闹市场到安静画廊，收藏墨尔本的日常。',zone:'Australia/Melbourne',offset:'+10:00',range:[82,159],events:[
-event(null,'维多利亚女王市场','spot','Queen Victoria Market Melbourne','步行约 850 米，途经 Flagstaff Gardens。青口贝、澳白、果酱甜甜圈、德国热狗按喜好选择。',88),
-event(null,'维多利亚州立图书馆','spot','State Library Victoria','先到 6 楼看全景，再去 5 楼与 3 楼拍摄；途经 Melbourne Central。',116),
-event(null,'唐人街 → 皇家拱廊','spot','Royal Arcade Melbourne','路过唐人街和 ChaTraMue，皇家拱廊拍照后前往市政厅。',120),
-event(null,'市政厅、涂鸦街与福林德车站','spot','Flinders Street Station Melbourne','经过圣保罗大教堂、Hosier Lane、联邦广场；教堂对面的长椅可拍车站。',129),
-event(null,'维多利亚国家美术馆','spot','National Gallery of Victoria','原表记录 10:00–17:00，留意闭馆时间；拍摄 2 楼作品及雕塑花园。',142),
-event('18:45','晚餐 · Palermo','food','Palermo Melbourne','原表有预约编号；眼肉牛排、脆土豆、提拉米苏。取消规则在原表中有不同表述，请以确认单为准。',149),
-event(null,'回酒店 · 检查后续预订','hotel','Oaks Melbourne on William Suites','核对行李额、Hello Auntie 预订、Kiama 包车日期与天气。',155)]},
-{date:'2026-09-28',city:'大洋路',en:'THE GREAT OCEAN ROAD',title:'一路向海，追着风走',subtitle:'十二门徒、悬崖与海湾，今天交给海岸线。',zone:'Australia/Melbourne',offset:'+10:00',range:[160,197],events:[
-event('07:50','Atlantis Hotel 集合出发','transit','Atlantis Hotel Melbourne','反向一日团；表内出发时间 07:50（另写 07:00–08:00），以旅行社通知为准。带保暖衣物、零食、充电宝及现金。',167),
-event('09:30','Colac 小镇休息','spot','Colac Victoria','服务区停留约 15 分钟。',170),
-event('11:00','十二门徒 · 海岸高光','spot','Twelve Apostles Victoria','预计停留 60 分钟。Gibson Steps 为可选，步行往返紧张，跟随团队安排。',171),
-event('12:10','洛克阿德峡谷与沉船湾','spot','Loch Ard Gorge Victoria','原计划约 30 分钟，观景台与 The Razorback。',174),
-event('13:30','寻找野生考拉','spot',null,'团队沿途停留约 15 分钟，是否遇到取决于当天情况。',175),
-event('13:50','Apollo Bay · 自由午餐','food','Apollo Bay Victoria','约 60 分钟。海鲜拼盘或海鲜意面，饭后可选 Dooley’s 冰淇淋。',177),
-event('15:15','Light-Cradling Nook','spot',null,'原表中的沿途停留点，具体地点由旅行社确认。',183),
-event('16:15','大洋路纪念门牌','spot','Great Ocean Road Memorial Arch','约 10 分钟拍照。',184),
-event('16:40','小红帽灯塔','spot',null,'原表记录停留 30 分钟；具体灯塔地点及登塔费用请随团确认。',185),
-event('19:50','返回墨尔本，晚餐自选','food','Melbourne CBD','预计 19:30–20:00 回城。Phở Tùng 在原表中写周一休息，今天为周一，建议另选 BBQ King 或 Chickorea。',186),
-event(null,'整理行李、备份相机','hotel',null,'注意行李重量与分类。',194)]},
-{date:'2026-09-29',city:'墨尔本',en:'A LITTLE ROOM TO WANDER',title:'留一天，给自由发挥',subtitle:'不赶路的日子，也属于旅行。',zone:'Australia/Melbourne',offset:'+10:00',range:[198,217],events:[
-event(null,'墨尔本自由行 · 待定','spot','Melbourne','详细计划尚未填写；原表提到可能直接前往悉尼，汇总表仍为 9 月 30 日飞悉尼。请核对机票后补充。',198)]},
-{date:'2026-09-30',city:'墨尔本 → 悉尼',en:'NEXT STOP, SYDNEY',title:'你好，海港之城',subtitle:'从一座喜欢的城市，飞往另一种浪漫。',zone:'Australia/Sydney',offset:'+10:00',range:[218,290],events:[
-event('08:00','起床，整理行李','hotel',null,'收拾行李、检查随身行李和托运行李额度。',220),
-event('09:00','前往墨尔本机场','transit','Melbourne Airport Terminal 4','从南十字星站乘 SkyBus。原计划 10:00 到机场。',223),
-event('10:00','T4 值机与行李托运','flight','Melbourne Airport Terminal 4','检查捷星行李额。原表“提前 1.5min”疑似笔误，请按航空公司规定办理值机。',225),
-event('11:30','JQ514 · 墨尔本 → 悉尼','flight','Melbourne Airport Terminal 4','原计划 11:30–13:00，墨尔本 T4 → 悉尼 T2。航班信息以航空公司为准。',230),
-event('15:00','悉尼机场 → 市区','transit','Museum Station Sydney','原表写 T2 抵达但列出 International Airport Station，站名需要核对；不要直接按国际机场站导航。',239),
-event('15:30','到酒店，办理入住','hotel',null,'详细表：Song Hotel；汇总表：悉尼海港套房酒店。请先核对酒店，地址确认前暂不提供导航。',243),
-event('16:15','Market City · 逛逛伴手礼','shop','Market City Sydney','步行约 1 公里。若落地晚，可以选达令港轻松路线。',250),
-event('17:20','Plan A · 天文台看风景','spot','Observatory Hill Park Sydney','原计划 17:20–17:40。与 Plan B 二选一；日落时间待核实。',256,{optional:true}),
-event('17:20','Plan B · 达令港散步','spot','Darling Harbour Sydney','落地较晚时选择较轻松的路线，与 Plan A 二选一。',270,{optional:true}),
-event('18:30','晚餐 · Hello Auntie','food','Hello Auntie Darling Square','原表记录提前 24 小时免费取消，否则每人 25 澳元。牛肉塔塔、春卷、鸭肉意面和咖啡甜品。',276),
-event(null,'超市补给，确认明日包车','shop','Coles World Square Sydney','准备零食、查看司机信息、备份相机。',279)]},
-{date:'2026-10-01',city:'Kiama · 悉尼南线',en:'A DAY ALONG THE COAST',title:'驶入海边的油画小镇',subtitle:'白色灯塔、蓝色海浪，还有一路的好风景。',zone:'Australia/Sydney',offset:'+10:00',range:[291,374],events:[
-event('07:15','起床与出发准备','hotel',null,'原表准备清单：防晒、雨伞、充电宝、现金、相机、纸巾、零食和大购物袋。',295),
-event('08:15','酒店早餐','food',null,'预留至 08:45，准时与包车司机会合。',296),
-event('08:45','南线包车出发','transit',null,'确认司机与集合地点，前往 Bald Hill。',299),
-event('09:45','Bald Hill 观景台','spot','Bald Hill Lookout','预计停留至 10:15；与 Sea Cliff Bridge 根据包车行程选择。',302),
-event(null,'Sea Cliff Bridge · 可选','spot','Sea Cliff Bridge','原表标注可能不去，与 Bald Hill 二选一。',304,{optional:true}),
-event(null,'午餐 · Kiama / 卧龙岗','food','Kiama NSW','原计划有卧龙岗炸鸡与 Kiama 午餐备选，随当天路线安排。',308),
-event('12:00','Kiama 灯塔与喷水洞','spot','Kiama Blowhole','预计至 13:00。灯塔与喷水洞在一起，喷水效果受海况影响。',323),
-event('13:15','Gerringong · 童话公路','spot','Gerringong Whale Watching Platform','沿 Tasman Drive 漫步，预计至 14:10。尊重当地居民，保持安静。',329),
-event(null,'袋鼠谷 · 加价备选','spot','Bendeela Recreation Area','原表写需要另加费用；未确认加入当天行程。',331,{optional:true}),
-event('14:30','Minnamurra · 心形沙滩','spot','Minnamurra Lookout','预计停留 30 分钟。',335),
-event('15:00','返回悉尼 · QVB 购物','shop','Queen Victoria Building Sydney','原计划 16:30 回到 QVB，附近 Aesop、Lululemon 等按需要购买；购物清单见原备注。',337),
-event('19:45','晚餐 · Bar Totti’s','food',"Bar Totti's Sydney",'原表记录提前 2 小时取消，否则每人 50 澳元。烤饼、Burrata、火腿与提拉米苏。',356),
-event(null,'买伴手礼，整理行李','shop','Coles World Square Sydney','备份照片、整理发票与行李。',363)]},
-{date:'2026-10-02',city:'悉尼',en:'POSTCARDS FROM SYDNEY',title:'把悉尼，装进相机里',subtitle:'歌剧院的清晨，海岸线的午后。',zone:'Australia/Sydney',offset:'+10:00',range:[375,454],events:[
-event('07:30','起床 · 酒店早餐','hotel',null,'带防晒、墨镜、露营垫、拍摄设备，准备适合徒步的鞋。',378),
-event('08:30','出发去 Circular Quay','transit','Circular Quay Sydney','白天拍车站、海港大桥与歌剧院；沿途可选 A.P Bakery。',380),
-event(null,'悉尼歌剧院','spot','Sydney Opera House','拍照点：Opera Bar 外侧步道、Man O’War Steps、植物园 Harbour View Lawn。',393),
-event(null,'麦考利夫人椅 → 美术馆','spot',"Mrs Macquarie's Chair Sydney",'从歌剧院步行约 1.4 公里；再去新南威尔士美术馆，可按兴趣调整。',395),
-event(null,'圣母主教座堂与海德公园','spot',"St Mary's Cathedral Sydney",'教堂内遵守现场参观要求，海德公园喷泉和长椅可拍照。',404),
-event(null,'午餐三选一，回酒店换装','food','Gumshara Sydney','Gumshara、Pork Rolls 或 Single O；备选详见原备注。',412),
-event(null,'Coogee → Bondi 海岸徒步','spot','Coogee Beach Sydney','约 6 公里、2.5 小时。经过 Waverley Cemetery、Tamarama 和 Icebergs。累了可跳过徒步直接到海滩。',425),
-event('17:00','Watsons Bay · 海边慢时光','spot','Robertson Park Watsons Bay','计划停留至 18:00；原表日落时间待核实。',437),
-event('18:15','渡轮前往 Circular Quay','transit','Watsons Bay Wharf','计划至 18:45；原表另写 F9 最晚 15:45，与此冲突。请先核对实际渡轮班次。',439),
-event('18:45','Circular Quay · 拍海港夜景','spot','Circular Quay Sydney','19:00 左右准备去餐厅，步行约 700 米。',442),
-event('19:30','晚餐 · Rockpool','food','Rockpool Bar & Grill Sydney','原表记录提前 4 小时取消，否则每人 50 澳元。预约编号与点菜建议见原备注。',447),
-event(null,'回酒店，备份相机','hotel',null,'整理行李，准备明日返程。',453)]},
-{date:'2026-10-03',city:'悉尼 → 上海',en:'UNTIL NEXT TIME',title:'带着回忆，回家',subtitle:'最后检查一次行李，把风景留在心里。',zone:'Australia/Sydney',offset:'+10:00',range:null,events:[
-event(null,'退房与机场交通 · 待补充','hotel',null,'原表未提供详细安排；请补充酒店确认单、航班号和机场集合时间。',null),
-event('14:10','悉尼 → 上海 · 返程','flight','Sydney Airport','汇总表记录 14:10 起飞；航班号、航站楼、抵达时间未填写。原表机票含 20kg 行李额，以机票为准。',47,{sourceSheet:'wqGvS6'})]}
+// Synced from Feishu revision 946, 2026-09-21. IDs are stable across source edits.
+export const days = [
+  {
+    "date": "2026-09-25",
+    "city": "上海 → 吉隆坡",
+    "en": "THE JOURNEY BEGINS",
+    "title": "出发，去南半球",
+    "subtitle": "整理好期待，向澳洲出发。",
+    "zone": "Asia/Shanghai",
+    "offset": "+08:00",
+    "range": [
+      8,
+      18
+    ],
+    "events": [
+      {
+        "time": "12:30",
+        "title": "出发前往浦东机场 T2",
+        "type": "transit",
+        "place": "上海浦东国际机场 T2",
+        "note": "4 号线转 2 号线；计划耗时 1.5 小时。",
+        "row": 12,
+        "id": "2026-09-25-0"
+      },
+      {
+        "time": null,
+        "title": "值机与安检",
+        "type": "flight",
+        "place": "上海浦东国际机场 T2",
+        "note": "9/25午餐：值机安检前后在浦东机场简单用餐；晚餐：按机票配餐或吉隆坡转机时简餐。住宿：夜间航班上，不安排酒店。",
+        "row": 13,
+        "id": "2026-09-25-1"
+      },
+      {
+        "time": "15:25",
+        "title": "上海 → 吉隆坡",
+        "type": "flight",
+        "place": "上海浦东国际机场 T2",
+        "note": "原计划 15:25–21:00，浦东 T2 → 吉隆坡 T1。",
+        "row": 14,
+        "id": "2026-09-25-2"
+      },
+      {
+        "time": "22:25",
+        "title": "吉隆坡 → 墨尔本",
+        "type": "flight",
+        "place": "Kuala Lumpur International Airport Terminal 1",
+        "note": "22:25 吉隆坡T1 → 次日08:20 墨尔本T2。入境卡 IPC：随身带笔，按实际信息填写。澳洲首晚酒店：Oaks Melbourne on William Suites（墨尔本威廉姆街盛橡套房酒店），350 William Street, Melbourne VIC 3000；电话 +61 3 8329 6600。",
+        "row": 15,
+        "id": "2026-09-25-3"
+      }
+    ],
+    "number": 0
+  },
+  {
+    "date": "2026-09-26",
+    "city": "墨尔本",
+    "en": "HELLO, MELBOURNE",
+    "title": "在墨尔本，慢慢着陆",
+    "subtitle": "一杯咖啡，一场海边日落。旅程从这里开始。",
+    "zone": "Australia/Melbourne",
+    "offset": "+10:00",
+    "range": [
+      19,
+      81
+    ],
+    "events": [
+      {
+        "time": "08:20",
+        "title": "抵达墨尔本 · T2",
+        "type": "flight",
+        "place": "Melbourne Airport Terminal 2",
+        "note": "准备护照、签证、机酒确认单、入境卡；入境后领取行李。",
+        "row": 21,
+        "id": "2026-09-26-0"
+      },
+      {
+        "time": "10:30",
+        "title": "搭乘 SkyBus 进入市区",
+        "type": "transit",
+        "place": "Southern Cross Station Melbourne",
+        "note": "面朝出口往左看就能看到skybus logo【凌晨4点至凌晨1点运营】\nMelbourne Tullamarine Airport——Southern Cross Station（市区交通枢纽 南十字星站）\n单程$23.9，往返（8天内有效）$40【大众点评买便宜！往返169元/人】\nSouthern Cross → 盛橡350 William St：步行预留20分钟；行李多可打车约10–15分钟（估算，按导航）。",
+        "row": 32,
+        "id": "2026-09-26-1"
+      },
+      {
+        "time": "11:15",
+        "title": "到酒店，寄存行李",
+        "type": "hotel",
+        "place": "Oaks Melbourne on William Suites",
+        "note": "盛橡 Oaks Melbourne on William Suites，350 William St；9/26–9/30 连住4晚。官网14:00入住、10:00退房，订单特殊约定优先。先寄存行李，12:00 Operator25 午餐，午后回酒店。来源：https://www.oakshotels.com/en/oaks-on-william",
+        "row": 36,
+        "id": "2026-09-26-2"
+      },
+      {
+        "time": "12:00",
+        "title": "午餐 · Operator25（已预约）",
+        "type": "food",
+        "place": "Operator25 Melbourne",
+        "note": "7:00–16:00 人均40$【老牌墨尔本天花板？】\n【1】beef bulgolgi taco韩式烤牛肉塔可——16$\n【2】Soft Shell Crab Omelette，软壳蟹煎蛋卷——$21\n【3】Spicy Mala Baked Eggs 四川麻辣焗豆烤蛋\n【4】紫薯UBE WAFFLE华夫饼——$25\n12:00预约；11:45从酒店步行出发。其他餐厅仅作备选。",
+        "row": 43,
+        "id": "2026-09-26-3"
+      },
+      {
+        "time": null,
+        "title": "咖啡与可颂的小停留",
+        "type": "food",
+        "place": "Overlay Coffee Melbourne",
+        "note": "Overlay 花生酱拿铁；Lune 杏仁可颂。按当天精力选择。",
+        "row": 51,
+        "id": "2026-09-26-4"
+      },
+      {
+        "time": "14:00",
+        "title": "办理入住，休息一下",
+        "type": "hotel",
+        "place": "Oaks Melbourne on William Suites",
+        "note": "回盛橡办理入住、洗澡休息。早餐：飞机餐／机场简单补充。午餐：12:00 Operator25。晚餐：St Kilda附近自行选择。",
+        "row": 57,
+        "id": "2026-09-26-5"
+      },
+      {
+        "time": "16:00",
+        "title": "向 St Kilda 海边出发",
+        "type": "transit",
+        "place": "St Kilda Pier Melbourne",
+        "note": "盛橡 → St Kilda Pier：步行至Bourke St/Spencer St附近96路站，乘往St Kilda Beach方向电车，下车步行至码头；全程预留45–60分钟。也可打车，按实时路况。原1/109路不采用。\n备选：直接导航St Kilda Pier打车；车程、费用按当日软件，不沿用原4.9km估算。",
+        "row": 61,
+        "id": "2026-09-26-6"
+      },
+      {
+        "time": "17:00",
+        "title": "St Kilda Pier · 看海与日落",
+        "type": "spot",
+        "place": "St Kilda Pier Melbourne",
+        "note": "17:00抵达。提前半小时到，蓝调时刻在日落后15-45分钟\n拍照【1】St Kilda Pier\n企鹅场次尚未约到，用户会持续关注；未取得预约前不按已订场次执行。约到后再衔接晚餐，未约到则海边散步、吃饭后回酒店。",
+        "row": 64,
+        "id": "2026-09-26-7"
+      },
+      {
+        "time": null,
+        "title": "企鹅归巢 · 可选活动",
+        "type": "spot",
+        "place": "St Kilda Pier Melbourne",
+        "note": "企鹅场次尚未约到，用户会持续关注；未取得预约前不按已订场次执行。约到后再衔接晚餐，未约到则海边散步、吃饭后回酒店。",
+        "row": 65,
+        "optional": true,
+        "id": "2026-09-26-8"
+      },
+      {
+        "id": "2026-09-26-st-kilda-dinner",
+        "title": "晚餐 · St Kilda 就近选择",
+        "type": "food",
+        "row": 71,
+        "time": null,
+        "place": "St Kilda Beach Melbourne",
+        "note": "晚餐备选：Republica St Kilda Beach、McDonald’s、Donovans，按企鹅场次与当日营业情况灵活选择，均未视为已预约。原Max晚餐不执行，已移至9/27 12:00午餐。"
+      },
+      {
+        "time": null,
+        "title": "超市补给，回酒店",
+        "type": "shop",
+        "place": "Coles Melbourne CBD",
+        "note": "住宿：盛橡 Oaks Melbourne on William Suites（350 William St）。回房休息，次日早餐在维妈市场解决。\n超市补给按体力决定，Coles资料见原备注。",
+        "row": 75,
+        "id": "2026-09-26-10"
+      }
+    ],
+    "number": 1
+  },
+  {
+    "date": "2026-09-27",
+    "city": "墨尔本",
+    "en": "WANDER THE CITY",
+    "title": "把城市，走成风景",
+    "subtitle": "不早起，慢慢逛；12:00 Max 午餐，18:45 Palermo 晚餐。",
+    "zone": "Australia/Melbourne",
+    "offset": "+10:00",
+    "range": [
+      82,
+      159
+    ],
+    "events": [
+      {
+        "time": null,
+        "title": "维多利亚女王市场",
+        "type": "spot",
+        "place": "Queen Victoria Market Melbourne",
+        "note": "步行约 850 米，途经 Flagstaff Gardens。青口贝、澳白、果酱甜甜圈、德国热狗按喜好选择。",
+        "row": 88,
+        "id": "2026-09-27-0"
+      },
+      {
+        "id": "2026-09-27-max-lunch",
+        "title": "午餐 · Max on Hardware（已预约）",
+        "type": "food",
+        "row": 110,
+        "time": "12:00",
+        "place": "Max on Hardware Melbourne",
+        "note": "维妈市场结束后步行前往餐厅，按实时导航安排出发，建议11:50到店；12:00午餐。餐后继续图书馆及市区漫步。"
+      },
+      {
+        "time": null,
+        "title": "维多利亚州立图书馆",
+        "type": "spot",
+        "place": "State Library Victoria",
+        "note": "先到 6 楼看全景，再去 5 楼与 3 楼拍摄；途经 Melbourne Central。",
+        "row": 116,
+        "id": "2026-09-27-1"
+      },
+      {
+        "time": null,
+        "title": "唐人街 → 皇家拱廊",
+        "type": "spot",
+        "place": "Royal Arcade Melbourne",
+        "note": "路过唐人街和 ChaTraMue，皇家拱廊拍照后前往市政厅。",
+        "row": 120,
+        "id": "2026-09-27-2"
+      },
+      {
+        "time": null,
+        "title": "市政厅、涂鸦街与福林德车站",
+        "type": "spot",
+        "place": "Flinders Street Station Melbourne",
+        "note": "经过圣保罗大教堂、Hosier Lane、联邦广场；教堂对面的长椅可拍车站。",
+        "row": 129,
+        "id": "2026-09-27-3"
+      },
+      {
+        "time": null,
+        "title": "维多利亚国家美术馆",
+        "type": "spot",
+        "place": "National Gallery of Victoria",
+        "note": "原表记录 10:00–17:00，留意闭馆时间；拍摄 2 楼作品及雕塑花园。",
+        "row": 142,
+        "id": "2026-09-27-4"
+      },
+      {
+        "time": "18:45",
+        "title": "晚餐 · Palermo",
+        "type": "food",
+        "place": "Palermo Melbourne",
+        "note": "原表有预约编号；眼肉牛排、脆土豆、提拉米苏。取消规则在原表中有不同表述，请以确认单为准。",
+        "row": 149,
+        "id": "2026-09-27-5"
+      },
+      {
+        "time": null,
+        "title": "回酒店 · 检查后续预订",
+        "type": "hotel",
+        "place": "Oaks Melbourne on William Suites",
+        "note": "住宿：盛橡，9/29晚再统一整理行李，9/30转场。检查随身／托运行李额度，以各人机票为准。\nHello Auntie已确认改为9/30 17:30；如不去，须至少提前24小时取消（即9/29 17:30前，悉尼当地时间），否则扣50澳元，按用户提供规则记录。",
+        "row": 155,
+        "id": "2026-09-27-6"
+      }
+    ],
+    "number": 2
+  },
+  {
+    "date": "2026-09-28",
+    "city": "大洋路",
+    "en": "THE GREAT OCEAN ROAD",
+    "title": "一路向海，追着风走",
+    "subtitle": "十二门徒、悬崖与海湾，今天交给海岸线。",
+    "zone": "Australia/Melbourne",
+    "offset": "+10:00",
+    "range": [
+      160,
+      197
+    ],
+    "events": [
+      {
+        "time": null,
+        "title": "旗杆花园／飞马酒店门口集合",
+        "type": "transit",
+        "place": "206 A'Beckett St Melbourne",
+        "note": "集合地址：206 A'Beckett St（用户确认）。盛橡350 William St出发，步行前往集合点；按导航及团方要求提前到达。确切集合时间9/27由团方通知，收到后再安排起床、早餐和出门时间。\n9/28出发时间以9/27团方通知为准；原07:50不作为确定时间。下列沿途时刻仅为参考，以当天团方安排为准。",
+        "row": 167,
+        "id": "2026-09-28-0"
+      },
+      {
+        "time": "09:30",
+        "title": "Colac 小镇休息",
+        "type": "spot",
+        "place": "Colac Victoria",
+        "note": "沿途时刻仅供参考，以团方当天安排为准。服务区停留约 15 分钟。",
+        "row": 170,
+        "id": "2026-09-28-1",
+        "tentative": true
+      },
+      {
+        "time": "11:00",
+        "title": "十二门徒 · 海岸高光",
+        "type": "spot",
+        "place": "Twelve Apostles Victoria",
+        "note": "沿途时刻仅供参考，以团方当天安排为准。预计停留 60 分钟。Gibson Steps 为可选，步行往返紧张，跟随团队安排。",
+        "row": 171,
+        "id": "2026-09-28-2",
+        "tentative": true
+      },
+      {
+        "time": "12:10",
+        "title": "洛克阿德峡谷与沉船湾",
+        "type": "spot",
+        "place": "Loch Ard Gorge Victoria",
+        "note": "沿途时刻仅供参考，以团方当天安排为准。原计划约 30 分钟，观景台与 The Razorback。",
+        "row": 174,
+        "id": "2026-09-28-3",
+        "tentative": true
+      },
+      {
+        "time": "13:30",
+        "title": "寻找野生考拉",
+        "type": "spot",
+        "place": null,
+        "note": "沿途时刻仅供参考，以团方当天安排为准。团队沿途停留约 15 分钟，是否遇到取决于当天情况。",
+        "row": 175,
+        "id": "2026-09-28-4",
+        "tentative": true
+      },
+      {
+        "time": "13:50",
+        "title": "Apollo Bay · 自由午餐",
+        "type": "food",
+        "place": "Apollo Bay Victoria",
+        "note": "沿途时刻仅供参考，以团方当天安排为准。约 60 分钟。海鲜拼盘或海鲜意面，饭后可选 Dooley’s 冰淇淋。",
+        "row": 177,
+        "id": "2026-09-28-5",
+        "tentative": true
+      },
+      {
+        "time": "15:15",
+        "title": "Light-Cradling Nook",
+        "type": "spot",
+        "place": null,
+        "note": "沿途时刻仅供参考，以团方当天安排为准。原表中的沿途停留点，具体地点由旅行社确认。",
+        "row": 183,
+        "id": "2026-09-28-6",
+        "tentative": true
+      },
+      {
+        "time": "16:15",
+        "title": "大洋路纪念门牌",
+        "type": "spot",
+        "place": "Great Ocean Road Memorial Arch",
+        "note": "沿途时刻仅供参考，以团方当天安排为准。约 10 分钟拍照。",
+        "row": 184,
+        "id": "2026-09-28-7",
+        "tentative": true
+      },
+      {
+        "time": "16:40",
+        "title": "小红帽灯塔",
+        "type": "spot",
+        "place": null,
+        "note": "沿途时刻仅供参考，以团方当天安排为准。原表记录停留 30 分钟；具体灯塔地点及登塔费用请随团确认。",
+        "row": 185,
+        "id": "2026-09-28-8",
+        "tentative": true
+      },
+      {
+        "time": "19:50",
+        "title": "返回墨尔本，自由晚餐",
+        "type": "food",
+        "place": "Melbourne CBD",
+        "note": "9/28大洋路返城后自行解决：优先集合点或盛橡附近仍营业的简餐／外带，不固定餐厅，不赶预约；太累可买回房吃。原Phở Tùng不作当天固定安排。",
+        "row": 186,
+        "id": "2026-09-28-9",
+        "tentative": true
+      },
+      {
+        "time": null,
+        "title": "回盛橡，备份相机与休息",
+        "type": "hotel",
+        "place": "Oaks Melbourne on William Suites",
+        "note": "住宿：盛橡。返城后就近吃饭、备份相机并休息，不安排额外购物；行李大整理放9/29晚上。",
+        "row": 194,
+        "id": "2026-09-28-10"
+      }
+    ],
+    "number": 3
+  },
+  {
+    "date": "2026-09-29",
+    "city": "墨尔本",
+    "en": "A LITTLE ROOM TO WANDER",
+    "title": "把一天，留给老地方与老朋友",
+    "subtitle": "Fitzroy、Monash Caulfield 与老友聚餐；时间当天决定。",
+    "zone": "Australia/Melbourne",
+    "offset": "+10:00",
+    "range": [
+      198,
+      217
+    ],
+    "events": [
+      {
+        "id": "2026-09-29-breakfast",
+        "title": "早餐 · 酒店附近自由安排",
+        "type": "food",
+        "row": 200,
+        "time": null,
+        "place": null,
+        "note": "酒店附近轻早餐，当天按起床时间与胃口选择。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-fitzroy-transit",
+        "title": "前往 Fitzroy",
+        "type": "transit",
+        "row": 202,
+        "time": null,
+        "place": "Brunswick Street Fitzroy Melbourne",
+        "note": "前往Brunswick St / Gertrude St：步行到Collins St的11路站，乘往West Preston方向至Fitzroy；含步行候车预留约30–40分钟。怕换乘可直接打车。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-fitzroy",
+        "title": "Fitzroy 漫游与午餐",
+        "type": "spot",
+        "row": 204,
+        "time": null,
+        "place": "Gertrude Street Fitzroy Melbourne",
+        "note": "Brunswick St／Gertrude St独立小店、咖啡、拍照与brunch随意安排，不固定午餐时段。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-monash-transit",
+        "title": "前往 Monash Caulfield",
+        "type": "transit",
+        "row": 206,
+        "time": null,
+        "place": "Monash University Caulfield Campus",
+        "note": "11路返回CBD，步行换乘Town Hall站Cranbourne／Pakenham线至Caulfield，出站步行到校园；全程预留60–90分钟。Monash官网确认Caulfield站邻近校园，2026线路经Metro Tunnel。以当日PTV导航为准。https://www.monash.edu/about/our-locations/transport-parking/public",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-monash",
+        "title": "母校重访 · Caulfield 校区",
+        "type": "spot",
+        "row": 208,
+        "time": null,
+        "place": "Monash University Caulfield Campus",
+        "note": "Monash University Caulfield Campus：校园散步、拍照、回忆留学时光；预留休息，不安排去Clayton校区。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-friends",
+        "title": "与老友聚餐",
+        "type": "food",
+        "row": 212,
+        "time": null,
+        "place": null,
+        "note": "与老友聚餐，餐厅、区域及时间当天商量，自由安排。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-hotel",
+        "title": "回盛橡，整理行李",
+        "type": "hotel",
+        "row": 214,
+        "time": null,
+        "place": "Oaks Melbourne on William Suites",
+        "note": "目的地：Oaks Melbourne on William Suites，350 William St。根据聚餐地点导航返程。回房整理行李、确认次日航班和行李额；9/30须10:00前退房。",
+        "flexible": true
+      }
+    ],
+    "number": 4
+  },
+  {
+    "date": "2026-09-30",
+    "city": "墨尔本 → 悉尼",
+    "en": "NEXT STOP, SYDNEY",
+    "title": "转场悉尼，赴一场音乐剧",
+    "subtitle": "JQ516 13:55–15:20 · 17:30晚餐 · 19:30 My Fair Lady",
+    "zone": "Australia/Sydney",
+    "offset": "+10:00",
+    "range": [
+      218,
+      290
+    ],
+    "events": [
+      {
+        "time": null,
+        "title": "起床，整理行李",
+        "type": "hotel",
+        "place": "Oaks Melbourne on William Suites",
+        "note": "不安排景点；梳洗、检查房间与行李。盛橡官网10:00退房，若希望更晚起床须酒店确认延迟退房。\n09:00–10:00收拾、退房；10:00–10:45在盛橡／Southern Cross附近 café 吃早午餐。早餐午餐合并；机场可补小食。",
+        "row": 220,
+        "id": "2026-09-30-0"
+      },
+      {
+        "time": "10:45",
+        "title": "前往墨尔本机场",
+        "type": "transit",
+        "place": "Melbourne Airport Terminal 4",
+        "note": "盛橡 → Southern Cross SkyBus站：步行约20分钟；搭Melbourne City Express到机场，含候车及交通预留60–75分钟，目标11:45–12:00抵达。备选直接打车；航站楼按新机票确认。https://www.skybus.com.au/melbourne-city-express/buy-tickets/",
+        "row": 223,
+        "id": "2026-09-30-1"
+      },
+      {
+        "time": "11:45",
+        "title": "T4 值机与行李托运",
+        "type": "flight",
+        "place": "Melbourne Airport Terminal 4",
+        "note": "JQ516，墨尔本T4出发；每人行李额25kg（用户确认）。随身行李额度另按订单核对，不沿用原20kg假设。\nJQ516 13:55起飞，目标11:45–12:00抵达墨尔本T4；办理值机、托运和安检，柜台及登机口关闭时间以订单／航司通知为准。",
+        "row": 225,
+        "id": "2026-09-30-2"
+      },
+      {
+        "time": "13:55",
+        "title": "JQ516 · 墨尔本T4 → 悉尼T2",
+        "type": "flight",
+        "place": "Melbourne Airport Terminal 4",
+        "note": "JQ516：13:55墨尔本机场T4起飞，15:20抵达悉尼金斯福德史密斯机场T2，均为当地时间；每人行李额25kg（用户确认）。",
+        "row": 230,
+        "id": "2026-09-30-3"
+      },
+      {
+        "time": "16:00",
+        "title": "悉尼机场 → 市区",
+        "type": "transit",
+        "place": "Song Hotel Sydney",
+        "note": "已确认抵达悉尼机场T2：到Domestic Airport Station乘T8往市区至Museum，步行至Song Hotel；含候车步行预留35–50分钟，行李多可打车。",
+        "row": 239,
+        "id": "2026-09-30-4"
+      },
+      {
+        "time": "16:45",
+        "title": "到酒店，办理入住",
+        "type": "hotel",
+        "place": "Song Hotel Sydney",
+        "note": "Song Hotel Sydney，5–11 Wentworth Ave, Sydney NSW 2000；9/30–10/3连住3晚。14:00起入住，11:00前退房；含早餐07:00–10:30。放行李、换装、携演出票出门。https://www.songhotels.com.au/rooms/",
+        "row": 243,
+        "id": "2026-09-30-5"
+      },
+      {
+        "id": "2026-09-30-walk-dinner",
+        "title": "步行前往 Hello Auntie",
+        "type": "transit",
+        "row": 250,
+        "time": "17:15",
+        "place": "Hello Auntie Darling Square",
+        "note": "入住、放行李后步行前往Hello Auntie Darling Square；按导航预留15–20分钟，争取17:20到店，17:30预约。当天不安排Market City购物。"
+      },
+      {
+        "time": "17:30",
+        "title": "晚餐 · Hello Auntie",
+        "type": "food",
+        "place": "Hello Auntie Darling Square",
+        "note": "9/30 17:30 Hello Auntie。需提前至少24小时取消，否则扣50澳元（用户提供，未注明按人计费）；取消截止9/29 17:30悉尼当地时间。入座时告知19:30演出，建议18:15前结束，留出赴歌剧院时间。",
+        "row": 252,
+        "id": "2026-09-30-9"
+      },
+      {
+        "id": "2026-09-30-opera-transit",
+        "title": "前往悉尼歌剧院",
+        "type": "transit",
+        "row": 254,
+        "time": "18:15",
+        "place": "Sydney Opera House",
+        "note": "建议18:15前从Hello Auntie出发，打车到歌剧院允许下客处后步行，预留约45分钟，目标19:00到场；备选步行至Museum乘往Circular Quay列车，再步行至剧院，按实时导航决定。"
+      },
+      {
+        "id": "2026-09-30-opera-entry",
+        "title": "歌剧院安检、入场",
+        "type": "spot",
+        "row": 256,
+        "time": "19:00",
+        "place": "Sydney Opera House",
+        "note": "My Fair Lady；Joan Sutherland Theatre；座位V42、V43（用户确认）。19:00到场，按电子票指引安检、入场及就座；19:30开演。"
+      },
+      {
+        "id": "2026-09-30-my-fair-lady",
+        "title": "My Fair Lady · V42、V43",
+        "type": "spot",
+        "row": 259,
+        "time": "19:30",
+        "place": "Joan Sutherland Theatre Sydney Opera House",
+        "note": "19:30开演；Seats V42、V43。提前下载电子票，结束时间以演出票／主办方信息为准。若航班延误，压缩休息及晚餐，尽量保留入场缓冲。"
+      },
+      {
+        "id": "2026-09-30-hotel-after-show",
+        "title": "散场后返回 Song Hotel",
+        "type": "hotel",
+        "row": 260,
+        "time": null,
+        "place": "Song Hotel Sydney",
+        "note": "步行回Circular Quay乘市区列车至Museum，再步行回酒店；夜间疲劳可打车。预留30–45分钟，住宿Song Hotel。"
+      }
+    ],
+    "number": 5
+  },
+  {
+    "date": "2026-10-01",
+    "city": "Kiama · 悉尼南线",
+    "en": "A DAY ALONG THE COAST",
+    "title": "驶入海边的油画小镇",
+    "subtitle": "白色灯塔、蓝色海浪，还有一路的好风景。",
+    "zone": "Australia/Sydney",
+    "offset": "+10:00",
+    "range": [
+      291,
+      374
+    ],
+    "events": [
+      {
+        "time": "07:15",
+        "title": "起床与出发准备",
+        "type": "hotel",
+        "place": "Song Hotel Sydney",
+        "note": "住宿：Song Hotel，5–11 Wentworth Ave。Kiama路线、购物和19:45 Bar Totti’s晚餐沿用原计划；晚餐后公共交通或打车回酒店，整理购物品、备份相机。",
+        "row": 295,
+        "id": "2026-10-01-0"
+      },
+      {
+        "time": "08:15",
+        "title": "酒店早餐",
+        "type": "food",
+        "place": "Song Hotel Sydney",
+        "note": "Song Hotel早餐（官网07:00–10:30），08:15–08:45用餐；08:45按原计划包车出发。",
+        "row": 296,
+        "id": "2026-10-01-1"
+      },
+      {
+        "time": "08:45",
+        "title": "南线包车出发",
+        "type": "transit",
+        "place": null,
+        "note": "10/1 Kiama包车信息由服务方在9/30提供；司机、接车时间和集合细节收到后核对。现有08:45出发等时刻为参考，以前一天通知为准，不再作为需现在补齐的缺口。",
+        "row": 299,
+        "id": "2026-10-01-2",
+        "tentative": true
+      },
+      {
+        "time": "09:45",
+        "title": "Bald Hill 观景台",
+        "type": "spot",
+        "place": "Bald Hill Lookout",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。预计停留至 10:15；与 Sea Cliff Bridge 根据包车行程选择。",
+        "row": 302,
+        "id": "2026-10-01-3",
+        "tentative": true
+      },
+      {
+        "time": null,
+        "title": "Sea Cliff Bridge · 可选",
+        "type": "spot",
+        "place": "Sea Cliff Bridge",
+        "note": "原表标注可能不去，与 Bald Hill 二选一。",
+        "row": 304,
+        "optional": true,
+        "id": "2026-10-01-4"
+      },
+      {
+        "time": null,
+        "title": "午餐 · Kiama / 卧龙岗",
+        "type": "food",
+        "place": "Kiama NSW",
+        "note": "原计划有卧龙岗炸鸡与 Kiama 午餐备选，随当天路线安排。",
+        "row": 308,
+        "id": "2026-10-01-5"
+      },
+      {
+        "time": "12:00",
+        "title": "Kiama 灯塔与喷水洞",
+        "type": "spot",
+        "place": "Kiama Blowhole",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。预计至 13:00。灯塔与喷水洞在一起，喷水效果受海况影响。",
+        "row": 323,
+        "id": "2026-10-01-6",
+        "tentative": true
+      },
+      {
+        "time": "13:15",
+        "title": "Gerringong · 童话公路",
+        "type": "spot",
+        "place": "Gerringong Whale Watching Platform",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。沿 Tasman Drive 漫步，预计至 14:10。尊重当地居民，保持安静。",
+        "row": 329,
+        "id": "2026-10-01-7",
+        "tentative": true
+      },
+      {
+        "time": null,
+        "title": "袋鼠谷 · 加价备选",
+        "type": "spot",
+        "place": "Bendeela Recreation Area",
+        "note": "原表写需要另加费用；未确认加入当天行程。",
+        "row": 331,
+        "optional": true,
+        "id": "2026-10-01-8"
+      },
+      {
+        "time": "14:30",
+        "title": "Minnamurra · 心形沙滩",
+        "type": "spot",
+        "place": "Minnamurra Lookout",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。预计停留 30 分钟。",
+        "row": 335,
+        "id": "2026-10-01-9",
+        "tentative": true
+      },
+      {
+        "time": "15:00",
+        "title": "返回悉尼 · QVB 购物",
+        "type": "shop",
+        "place": "Queen Victoria Building Sydney",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。原计划 16:30 回到 QVB，附近 Aesop、Lululemon 等按需要购买；购物清单见原备注。",
+        "row": 337,
+        "id": "2026-10-01-10",
+        "tentative": true
+      },
+      {
+        "time": "19:45",
+        "title": "晚餐 · Bar Totti’s",
+        "type": "food",
+        "place": "Bar Totti's Sydney",
+        "note": "原表记录提前 2 小时取消，否则每人 50 澳元。烤饼、Burrata、火腿与提拉米苏。",
+        "row": 356,
+        "id": "2026-10-01-11"
+      },
+      {
+        "time": null,
+        "title": "买伴手礼，整理行李",
+        "type": "shop",
+        "place": "Coles World Square Sydney",
+        "note": "备份照片、整理发票与行李。",
+        "row": 363,
+        "id": "2026-10-01-12"
+      }
+    ],
+    "number": 6
+  },
+  {
+    "date": "2026-10-02",
+    "city": "悉尼",
+    "en": "POSTCARDS FROM SYDNEY",
+    "title": "悉尼最后一日 · 待打磨草案",
+    "subtitle": "海港与植物园，下午购物或 Bondi 二选一；17:00回酒店。",
+    "zone": "Australia/Sydney",
+    "offset": "+10:00",
+    "range": [
+      375,
+      454
+    ],
+    "events": [
+      {
+        "id": "2026-10-02-breakfast",
+        "title": "Song Hotel 早餐",
+        "type": "food",
+        "row": 378,
+        "time": "07:00",
+        "place": "Song Hotel Sydney",
+        "note": "早餐：07:00–07:45 Song Hotel；08:00左右出发。全天为待打磨草案，不沿用原Coogee–Watsons长线；Rockpool时间暂不改订。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-harbour-transit",
+        "title": "前往 Circular Quay",
+        "type": "transit",
+        "row": 382,
+        "time": "08:00",
+        "place": "Circular Quay Sydney",
+        "note": "Song Hotel步行至Museum，乘往Circular Quay列车，再沿海港步行；预留30分钟，08:30开始海港散步。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-harbour",
+        "title": "海港散步与歌剧院外观",
+        "type": "spot",
+        "row": 393,
+        "time": "08:30",
+        "place": "Sydney Opera House",
+        "note": "早上10点前左右，没有人！\n【1】悉尼歌剧院门口的Opera House Bar\n侧面的步行道上有很多凳子\n【2】Man O'War Steps在bar座椅的另一侧 \n【3】皇家植物园的Harbour View Lawn\n【4】皇家植物园的Mrs Macquarie's Chair\nCremorne Point Wharf, Milson Rd 225\n悉尼最美的巴士站，玻璃窗的背后就是悉尼歌剧院（长焦段）",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-gardens",
+        "title": "皇家植物园散步",
+        "type": "spot",
+        "row": 395,
+        "time": "10:00",
+        "place": "Royal Botanic Garden Sydney",
+        "note": "10:00–11:30植物园散步；麦考利夫人椅仅体力允许时延伸。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-gallery-option",
+        "title": "新南威尔士美术馆 · 沿途备选",
+        "type": "spot",
+        "row": 400,
+        "time": null,
+        "place": "Art Gallery of New South Wales",
+        "note": "不爱艺术 可以不进去看 在外面拍拍照就行\n开放时间：10:00至17:00 周三开放至晚10:00\n展馆免费，部分特展需要门票\n莫奈《贝勒岛的古尔法港》、梵高《农民头像》、毕加索《摇椅上的裸女》、马蒂斯《裸女》、萨索费拉托《圣母祈祷像》，都藏在南馆",
+        "optional": true,
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-cathedral-option",
+        "title": "圣玛丽大教堂 · 沿途备选",
+        "type": "spot",
+        "row": 404,
+        "time": null,
+        "place": "St Mary's Cathedral Sydney",
+        "note": "这个教堂，参观是免费的，也不需要预约。\n该教堂始建于1821年，采用哥特式建筑风格\n在做弥撒的时候，不可以到处乱走，\n也不可以乱拍照，需要坐在座位上。\n\n教堂内没有洗手间，洗手间在教堂东边侧门",
+        "optional": true,
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-lunch",
+        "title": "午餐与午间休息",
+        "type": "food",
+        "row": 412,
+        "time": "11:30",
+        "place": null,
+        "note": "午餐＋午间休息：从植物园返回CBD／酒店方向，选择附近简餐；Gumshara等原餐厅保留为备选，不为排队压缩休息。餐厅和具体路线待10/2继续打磨。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-shopping-option",
+        "title": "方案A · CBD 购物",
+        "type": "shop",
+        "row": 418,
+        "time": "13:00",
+        "place": "Queen Victoria Building Sydney",
+        "note": "13:00–16:00：A 购物未完成→QVB／Pitt St／Westfield一带步行购物；B 购物完成→Museum附近乘333至Bondi Beach，海滩＋Icebergs附近短走，15:45–16:00返程，预留45–60分钟。17:00回Song Hotel。来源：https://transportnsw.info/routes/details/sydney-buses-network/333/30333",
+        "optional": true,
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-bondi-option",
+        "title": "方案B · Bondi 短走",
+        "type": "spot",
+        "row": 418,
+        "time": "13:00",
+        "place": "Bondi Beach Sydney",
+        "note": "13:00–16:00：A 购物未完成→QVB／Pitt St／Westfield一带步行购物；B 购物完成→Museum附近乘333至Bondi Beach，海滩＋Icebergs附近短走，15:45–16:00返程，预留45–60分钟。17:00回Song Hotel。来源：https://transportnsw.info/routes/details/sydney-buses-network/333/30333",
+        "optional": true,
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-packing",
+        "title": "回 Song Hotel，打包与整理退税材料",
+        "type": "hotel",
+        "row": 442,
+        "time": "17:00",
+        "place": "Song Hotel Sydney",
+        "note": "打包、行李称重、整理退税材料、确认次日11:00返程航班；不再去Circular Quay夜拍。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-dinner-pending",
+        "title": "晚餐 · Rockpool 状态待确认",
+        "type": "food",
+        "row": 447,
+        "time": null,
+        "place": "Rockpool Bar & Grill Sydney",
+        "note": "原记录19:30，当前预约状态及时间待确认；本次同步未取消或改订。若保留Rockpool：由Song Hotel打车至Rockpool Bar & Grill Sydney（66 Hunter St），预留20–30分钟；餐厅与时段等10/2方案继续打磨后确定。\n原表取消规则需以实际订单为准；尚未确认改早。",
+        "tentative": true
+      },
+      {
+        "id": "2026-10-02-hotel",
+        "title": "回酒店，尽早休息",
+        "type": "hotel",
+        "row": 453,
+        "time": null,
+        "place": "Song Hotel Sydney",
+        "note": "住宿：Song Hotel最后一晚。晚餐后打车／公共交通回酒店，尽早休息；10/3约07:00出发赴机场。",
+        "tentative": true
+      }
+    ],
+    "number": 7
+  },
+  {
+    "date": "2026-10-03",
+    "city": "悉尼 → 上海",
+    "en": "UNTIL NEXT TIME",
+    "title": "带着回忆，回家",
+    "subtitle": "07:00赴机场 · MU562 11:00直飞 · 19:25抵达浦东T1。",
+    "zone": "Australia/Sydney",
+    "offset": "+10:00",
+    "range": [
+      456,
+      474
+    ],
+    "events": [
+      {
+        "id": "2026-10-03-checkout",
+        "title": "自备早餐，退房与检查行李",
+        "type": "hotel",
+        "row": 458,
+        "time": "06:15",
+        "place": "Song Hotel Sydney",
+        "note": "前晚准备轻早餐；酒店自助早餐07:00开始，当天不等早餐开餐。06:45完成房间检查、退房，护照与退税资料随身。"
+      },
+      {
+        "id": "2026-10-03-airport-transit",
+        "title": "前往悉尼机场T1",
+        "type": "transit",
+        "row": 460,
+        "time": "07:00",
+        "place": "Sydney Airport Terminal 1",
+        "note": "MU562国际出发，已确认悉尼金斯福德史密斯机场T1。07:00酒店出发，打车直达T1，预留45–60分钟；备选步行至Museum乘T8到International Airport。目标08:00前到达，前一天核对交通运行。"
+      },
+      {
+        "id": "2026-10-03-airport-procedures",
+        "title": "值机、托运、安检与退税",
+        "type": "flight",
+        "row": 462,
+        "time": "08:00",
+        "place": "Sydney Airport Terminal 1",
+        "note": "需托运的退税物品先按机场要求查验，再托运；携护照、登机牌、发票及对应商品，预留排队时间。以不误机为先，完成后按登机牌到登机口。规则来源：https://www.abf.gov.au/entering-and-leaving-australia/tourist-refund-scheme"
+      },
+      {
+        "id": "2026-10-03-boarding",
+        "title": "前往登机口",
+        "type": "flight",
+        "row": 464,
+        "time": "10:00",
+        "place": "Sydney Airport Terminal 1",
+        "note": "确认登机口及关闭时间，补水、洗手间；不再安排购物。"
+      },
+      {
+        "id": "2026-10-03-mu562",
+        "title": "MU562 · 悉尼T1 → 上海浦东T1",
+        "type": "flight",
+        "row": 466,
+        "time": "11:00",
+        "place": "Sydney Airport Terminal 1",
+        "note": "MU562直飞不转机：悉尼金斯福德史密斯机场T1出发，上海浦东机场T1到达。11:00–19:25均为当地时间。午晚餐按航司实际配餐，随身备少量零食。"
+      },
+      {
+        "id": "2026-10-03-arrival-home",
+        "title": "抵达浦东T1，取行李回家",
+        "type": "transit",
+        "row": 468,
+        "time": "19:25",
+        "place": "上海浦东国际机场 T1",
+        "note": "19:25抵达上海浦东机场T1；入境、取行李后打车／机场轨道交通回家，按当日交通与目的地导航。若晚餐不足则机场或回家简单补充。住宿：返家。",
+        "offset": "+08:00",
+        "city": "上海"
+      }
+    ],
+    "number": 8
+  }
 ];
-days.forEach((d,i)=>{d.number=i;d.events.forEach((e,j)=>e.id=`${d.date}-${j}`)});
-export const issues=[
-{title:'悉尼酒店名称不一致',text:'汇总表是“悉尼海港套房酒店”，9/30 详细计划是“Song Hotel”。请按实际确认单核对。',date:'09.30'},
-{title:'企鹅与晚餐的时间冲突',text:'9/26 企鹅场次为 18:30 或 19:30，当晚 Max on Hardware 预约为 19:00，需要选择。',date:'09.26'},
-{title:'9 月 29 日安排待定',text:'详细表保留自由行或提前飞悉尼两种想法；汇总表与航班明细都是 9/30 飞悉尼。',date:'09.29'},
-{title:'渡轮班次需要核对',text:'10/2 计划 18:15 搭船，但备注又写 F9 最晚 15:45。不要将该时间当作已确认班次。',date:'10.02'},
-{title:'墨尔本酒店地址混用',text:'入境卡备注写 Dorsett Melbourne，住宿计划写威廉姆街盛橡。请用真实入住酒店信息。',date:'09.25'},
-{title:'机场站名与航站楼不符',text:'9/30 抵达悉尼 T2，但市区交通写 International Airport Station；请核对实际车站。',date:'09.30'},
-{title:'周一晚餐备选需调整',text:'9/28 为周一，Phở Tùng 的原表备注也写周一休息。可另选原表中的餐厅。',date:'09.28'},
-{title:'日落、营业时间与预订待确认',text:'这里展示的是你的计划快照，未在线核实日落、营业时间、票价或取消条款。按实际预订和出发当天信息安排。',date:'全程'}
+export const issues = [
+  {
+    "title": "St Kilda 企鹅尚未约到",
+    "text": "9/26尚未取得场次，继续关注；约到后衔接晚餐，未约到则海边散步、吃饭后返回盛橡。",
+    "date": "09.26"
+  },
+  {
+    "title": "大洋路集合时间等团方通知",
+    "text": "9/27接收通知；集合地点为206 A'Beckett St旗杆花园／飞马酒店门口，旧07:50不再作为确定时间。",
+    "date": "09.27"
+  },
+  {
+    "title": "Hello Auntie 取消截止时间",
+    "text": "已订9/30 17:30；如不去，须在9/29 17:30悉尼当地时间前取消，否则扣50澳元（原文未注明按人计费）。",
+    "date": "09.29"
+  },
+  {
+    "title": "航班、晚餐与音乐剧紧密衔接",
+    "text": "9/30 JQ516 15:20抵达T2，17:30 Hello Auntie，19:00剧院入场、19:30开演；延误时压缩休息及晚餐，保留赴剧院时间。",
+    "date": "09.30"
+  },
+  {
+    "title": "Kiama 接车信息前一天提供",
+    "text": "9/30接收司机、接车时间与地点；10/1现有沿途时刻是参考，不作为已确认班次。",
+    "date": "09.30"
+  },
+  {
+    "title": "10/2 仍为草案，Rockpool 待确认",
+    "text": "保留海港、植物园与下午二选一草案；原Coogee–Watsons长线不执行，Rockpool预约状态及时间待后续确认。",
+    "date": "10.02"
+  },
+  {
+    "title": "返程早出发，不等酒店早餐",
+    "text": "10/3 07:00出发，目标08:00前到悉尼T1，MU562 11:00直飞浦东T1；早餐前晚备好。",
+    "date": "10.03"
+  },
+  {
+    "title": "旧预算与资料仅作参考",
+    "text": "餐饮、交通预算尚未按新版重算；旧备选资料保留但不加入当天执行安排。票价、营业时间和实时交通仍按实际情况核对。",
+    "date": "全程"
+  }
 ];
