@@ -1,0 +1,169 @@
+- generic [ref=e2]:
+  - generic:
+    - generic "弹窗遮罩" [ref=e3]
+    - generic [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]
+      - generic [ref=e8]:
+        - generic [ref=e9]: 登录后查看搜索结果
+        - generic [ref=e14]:
+          - text: 可用
+          - generic [ref=e15]: 小红书
+          - text: 或
+          - generic [ref=e18]: 微信
+          - text: 扫码
+        - generic [ref=e21] [cursor=pointer]: 小红书如何扫码
+      - generic [ref=e24]:
+        - generic [ref=e25]: 手机号登录
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - generic [ref=e29]: "+86"
+            - textbox "+86" [active] [ref=e30]:
+              - /placeholder: 输入手机号
+          - generic [ref=e32]:
+            - spinbutton "获取验证码" [ref=e33]
+            - generic [ref=e34] [cursor=pointer]: 获取验证码
+          - button "登录" [ref=e36] [cursor=pointer]
+        - generic [ref=e37]:
+          - generic [ref=e38] [cursor=pointer]
+          - generic [ref=e40]:
+            - text: 我已阅读并同意
+            - link "《用户协议》" [ref=e42] [cursor=pointer]:
+              - /url: https://agree.xiaohongshu.com/h5/terms/ZXXY20220331001/-1
+            - link "《隐私政策》" [ref=e44] [cursor=pointer]:
+              - /url: https://agree.xiaohongshu.com/h5/terms/ZXXY20220509001/-1
+            - link "《儿童/青少年个人信息保护规则》" [ref=e46] [cursor=pointer]:
+              - /url: https://oa.xiaohongshu.com/h5/terms/ZXXY20220516001/-1
+        - generic [ref=e47]: 新用户可直接登录
+  - generic [ref=e48]:
+    - banner [ref=e50]:
+      - link [ref=e51] [cursor=pointer]:
+        - /url: /explore?channel_type=web_search_result_notes
+      - generic [ref=e52]:
+        - textbox "登录探索更多内容" [ref=e53]: 小红帽灯塔 拍照
+        - generic [ref=e54]:
+          - generic [ref=e55] [cursor=pointer]
+          - img "搜索" [ref=e59] [cursor=pointer]
+      - generic [ref=e62]:
+        - button "创作中心" [ref=e64] [cursor=pointer]
+        - button "业务合作" [ref=e68] [cursor=pointer]
+    - generic [ref=e71]:
+      - generic [ref=e72]:
+        - list [ref=e73]:
+          - generic [ref=e74]:
+            - listitem [ref=e75] [cursor=pointer]:
+              - link "发现" [ref=e76]:
+                - /url: /explore?channel_id=homefeed_recommend
+            - listitem [ref=e80] [cursor=pointer]:
+              - link "RED" [ref=e81]:
+                - /url: /red_video
+            - listitem [ref=e85] [cursor=pointer]:
+              - link "直播" [ref=e86]:
+                - /url: /livelist?channel_id=0&channel_type=web_live_list
+            - listitem [ref=e90] [cursor=pointer]:
+              - link "发布" [ref=e91]:
+                - /url: https://creator.xiaohongshu.com/publish/publish?source=official
+            - listitem [ref=e95] [cursor=pointer]:
+              - link "通知" [ref=e96]:
+                - /url: "#"
+            - listitem [ref=e101] [cursor=pointer]:
+              - link "消息" [ref=e102]:
+                - /url: "#"
+            - button "登录" [ref=e108] [cursor=pointer]
+          - generic [ref=e111]:
+            - paragraph [ref=e112]:
+              - link "沪ICP备13030189号" [ref=e113] [cursor=pointer]:
+                - /url: //beian.miit.gov.cn/
+              - text: "|"
+              - link "营业执照" [ref=e114] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323gtfdq87a0690nvj5qg0000000003rivl690
+              - text: "|"
+              - link "2026沪公网安备31010102002533号" [ref=e115] [cursor=pointer]:
+                - /url: //www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002533
+              - text: "|"
+              - link "增值电信业务经营许可证：沪B2-20150021" [ref=e116] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323fvnu0anu7690nvj5qg0000000003pqm217o
+              - text: "|"
+              - link "医疗器械网络交易服务第三方平台备案：(沪)网械平台备字[2019]第00006号" [ref=e117] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform/410dce57bc12a6d7e5808060e47644fbe46f68ff.pdf
+              - text: "|"
+              - link "互联网药品信息服务资格证书：(沪)-经营性-2023-0144" [ref=e118] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform/f37a08cacc088061beb38329c387c32fc48fc6fe.pdf
+              - text: "|"
+              - link "违法不良信息举报电话：4006676810" [ref=e119] [cursor=pointer]:
+                - /url: //www.shjbzx.cn
+              - text: "|"
+              - link "上海市互联网举报中心" [ref=e120] [cursor=pointer]:
+                - /url: //www.shjbzx.cn
+              - text: "|"
+              - link "网上有害信息举报专区" [ref=e121] [cursor=pointer]:
+                - /url: //www.12377.cn
+              - text: "|"
+              - link "自营经营者信息" [ref=e122] [cursor=pointer]:
+                - /url: //dc.xhscdn.com/06c2adb0-b353-11e9-9d0c-7be9ff8961c1/自营经营者信息公示.pdf
+              - text: "|"
+              - link "网络文化经营许可证：沪网文[2021]1545-113号" [ref=e123] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323fvnuec7u0690nvj5qg0000000003o78obkg
+              - text: "| 个性化推荐算法 网信算备310101216601302230019号"
+            - generic [ref=e124]:
+              - paragraph [ref=e125]: © 2014-2026
+              - paragraph [ref=e126]: 行吟信息科技（上海）有限公司
+              - paragraph [ref=e127]: 地址：上海市黄浦区马当路388号C座
+              - paragraph [ref=e128]: 电话：9501-3888
+        - generic [ref=e130]:
+          - generic [ref=e131] [cursor=pointer]: 更多
+          - generic [ref=e134]: 关于我们
+          - generic [ref=e138]:
+            - paragraph [ref=e139]:
+              - link "沪ICP备13030189号" [ref=e140] [cursor=pointer]:
+                - /url: //beian.miit.gov.cn/
+              - text: "|"
+              - link "营业执照" [ref=e141] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323gtfdq87a0690nvj5qg0000000003rivl690
+              - text: "|"
+              - link "2026沪公网安备31010102002533号" [ref=e142] [cursor=pointer]:
+                - /url: //www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002533
+              - text: "|"
+              - link "增值电信业务经营许可证：沪B2-20150021" [ref=e143] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323fvnu0anu7690nvj5qg0000000003pqm217o
+              - text: "|"
+              - link "医疗器械网络交易服务第三方平台备案：(沪)网械平台备字[2019]第00006号" [ref=e144] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform/410dce57bc12a6d7e5808060e47644fbe46f68ff.pdf
+              - text: "|"
+              - link "互联网药品信息服务资格证书：(沪)-经营性-2023-0144" [ref=e145] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform/f37a08cacc088061beb38329c387c32fc48fc6fe.pdf
+              - text: "|"
+              - link "违法不良信息举报电话：4006676810" [ref=e146] [cursor=pointer]:
+                - /url: //www.shjbzx.cn
+              - text: "|"
+              - link "上海市互联网举报中心" [ref=e147] [cursor=pointer]:
+                - /url: //www.shjbzx.cn
+              - text: "|"
+              - link "网上有害信息举报专区" [ref=e148] [cursor=pointer]:
+                - /url: //www.12377.cn
+              - text: "|"
+              - link "自营经营者信息" [ref=e149] [cursor=pointer]:
+                - /url: //dc.xhscdn.com/06c2adb0-b353-11e9-9d0c-7be9ff8961c1/自营经营者信息公示.pdf
+              - text: "|"
+              - link "网络文化经营许可证：沪网文[2021]1545-113号" [ref=e150] [cursor=pointer]:
+                - /url: //fe-video-qc.xhscdn.com/fe-platform-file/104101b8323fvnuec7u0690nvj5qg0000000003o78obkg
+              - text: "| 个性化推荐算法 网信算备310101216601302230019号"
+            - generic [ref=e151]:
+              - paragraph [ref=e152]: © 2014-2026
+              - paragraph [ref=e153]: 行吟信息科技（上海）有限公司
+              - paragraph [ref=e154]: 地址：上海市黄浦区马当路388号C座
+              - paragraph [ref=e155]: 电话：9501-3888
+      - generic [ref=e159]:
+        - generic [ref=e161]:
+          - generic [ref=e162] [cursor=pointer]: 全部
+          - generic [ref=e163] [cursor=pointer]: 图文
+          - generic [ref=e164] [cursor=pointer]: 视频
+          - generic [ref=e165] [cursor=pointer]: 用户
+        - generic [ref=e166] [cursor=pointer]: 筛选
+  - generic [ref=e212]:
+    - generic [ref=e213]:
+      - button [ref=e216] [cursor=pointer]
+      - generic [ref=e220]: 活动
+      - generic [ref=e221]:
+        - button [ref=e223] [cursor=pointer]
+        - button [ref=e227] [cursor=pointer]
+    - iframe [ref=e231]

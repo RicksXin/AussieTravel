@@ -10,7 +10,8 @@
     "build:h5": "taro build --type h5",
     "test": "node --test tests/*.test.js",
     "assets": "node scripts/assets.cjs",
-    "preview": "node scripts/preview.cjs"
+    "preview": "node scripts/preview.cjs",
+    "media:upload": "node scripts/upload-media.mjs"
   },
   "dependencies": {
     "@babel/runtime": "^7.28.0",
@@ -31,6 +32,7 @@
     "@babel/plugin-transform-runtime": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-react": "^7.29.7",
+    "@cloudbase/cli": "^3.8.3",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.6.3",
     "@tarojs/cli": "4.2.1",
     "@tarojs/webpack5-runner": "4.2.1",

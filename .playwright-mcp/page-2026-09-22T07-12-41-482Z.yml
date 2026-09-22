@@ -1,0 +1,264 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e11]:
+        - text: 澳游
+        - generic [ref=e12]: AUSSIE DAYS
+      - generic [ref=e14]:
+        - generic [ref=e15]: 墨尔本
+        - generic [ref=e16]: 9.25 — 10.03 · 澳大利亚
+      - generic [ref=e18]:
+        - button "2026-09-25 上海 → 吉隆坡" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: "09.25"
+          - generic [ref=e21]: 上海
+        - button "2026-09-26 墨尔本" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: "09.26"
+          - generic [ref=e24]: 墨尔本
+        - button "2026-09-27 墨尔本" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: "09.27"
+          - generic [ref=e27]: 墨尔本
+        - button "2026-09-28 大洋路" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "09.28"
+          - generic [ref=e30]: 大洋路
+        - button "2026-09-29 墨尔本" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: "09.29"
+          - generic [ref=e33]: 自由日
+        - button "2026-09-30 墨尔本 → 悉尼" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: "09.30"
+          - generic [ref=e36]: 悉尼
+        - button "2026-10-01 Kiama · 悉尼南线" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: "10.01"
+          - generic [ref=e39]: Kiama
+        - button "2026-10-02 悉尼" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: "10.02"
+          - generic [ref=e42]: 悉尼
+        - button "2026-10-03 悉尼 → 上海" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: "10.03"
+          - generic [ref=e45]: 返程
+    - generic [ref=e46]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: 在墨尔本，慢慢着陆
+            - generic [ref=e52]: 一杯咖啡，一场海边日落。旅程从这里开始。
+          - generic [ref=e53]: 0/11 已完成
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - button "全部" [ref=e57] [cursor=pointer]
+            - button "探索" [ref=e58] [cursor=pointer]
+            - button "美食" [ref=e59] [cursor=pointer]
+            - button "交通" [ref=e60] [cursor=pointer]
+            - button "航班" [ref=e61] [cursor=pointer]
+            - button "住宿" [ref=e62] [cursor=pointer]
+            - button "购物" [ref=e63] [cursor=pointer]
+          - button "原备注 ↗" [ref=e64] [cursor=pointer]
+        - generic "搜索当天行程" [ref=e68]:
+          - textbox "搜索当天景点、餐厅、备注…" [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: 08:20
+              - generic [ref=e74]: 计划时间
+            - generic [ref=e78]:
+              - button "查看抵达墨尔本 · T2" [ref=e79] [cursor=pointer]:
+                - generic [ref=e80]: 航班
+                - generic [ref=e82]: 抵达墨尔本 · T2
+                - generic [ref=e83]: 准备护照、签证、机酒确认单、入境卡；入境后领取行李。
+              - generic [ref=e84]:
+                - generic [ref=e85]: Melbourne Airport Terminal 2
+                - generic [ref=e86]:
+                  - button "导航：Melbourne Airport Terminal 2" [ref=e87] [cursor=pointer]: 导航
+                  - button "标记完成：抵达墨尔本 · T2" [ref=e90] [cursor=pointer]:
+                    - generic [ref=e91]: ○
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]: 10:30
+              - generic [ref=e95]: 计划时间
+            - generic [ref=e99]:
+              - button "查看搭乘 SkyBus 进入市区" [ref=e100] [cursor=pointer]:
+                - generic [ref=e101]: 交通
+                - generic [ref=e103]: 搭乘 SkyBus 进入市区
+                - generic [ref=e104]: 面朝出口往左看就能看到skybus logo【凌晨4点至凌晨1点运营】 Melbourne Tullamarine Airport——Southern Cross Station（市区交通枢纽 南十字星站） 单程$23.9，往返（8天内有效）$40【大众点评买便宜！往返169元/人】 Southern Cross → 盛橡350 William St：步行预留20分钟；行李多可打车约10–15分钟（估算，按导航）。
+              - generic [ref=e105]:
+                - generic [ref=e106]: Southern Cross Station Melbourne
+                - generic [ref=e107]:
+                  - button "导航：Southern Cross Station Melbourne" [ref=e108] [cursor=pointer]: 导航
+                  - button "标记完成：搭乘 SkyBus 进入市区" [ref=e111] [cursor=pointer]:
+                    - generic [ref=e112]: ○
+          - generic [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: 11:15
+              - generic [ref=e116]: 计划时间
+            - generic [ref=e120]:
+              - button "查看到酒店，寄存行李" [ref=e121] [cursor=pointer]:
+                - generic [ref=e122]: 住宿
+                - generic [ref=e124]: 到酒店，寄存行李
+                - generic [ref=e125]: 盛橡 Oaks Melbourne on William Suites，350 William St；9/26–9/30 连住4晚。官网14:00入住、10:00退房，订单特殊约定优先。先寄存行李，12:00 Operator25 午餐，午后回酒店。来源：https://www.oakshotels.com/en/oaks-on-william
+              - generic [ref=e126]:
+                - generic [ref=e127]: Oaks Melbourne on William Suites
+                - generic [ref=e128]:
+                  - button "导航：Oaks Melbourne on William Suites" [ref=e129] [cursor=pointer]: 导航
+                  - button "标记完成：到酒店，寄存行李" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e133]: ○
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - generic [ref=e136]: 12:00
+              - generic [ref=e137]: 计划时间
+            - generic [ref=e141]:
+              - button "查看午餐 · Operator25（已预约）" [ref=e142] [cursor=pointer]:
+                - generic [ref=e143]: 美食
+                - generic [ref=e145]: 午餐 · Operator25（已预约）
+                - generic [ref=e146]: 12:00 预约；11:45 从酒店步行出发。其他餐厅仅作备选。
+              - generic [ref=e147]:
+                - generic [ref=e148]: Operator25 Melbourne
+                - generic [ref=e149]:
+                  - button "导航：Operator25 Melbourne" [ref=e150] [cursor=pointer]: 导航
+                  - button "标记完成：午餐 · Operator25（已预约）" [ref=e153] [cursor=pointer]:
+                    - generic [ref=e154]: ○
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]: 待安排
+              - generic [ref=e158]: 按顺序游览
+            - generic [ref=e162]:
+              - button "查看咖啡与可颂的小停留" [ref=e163] [cursor=pointer]:
+                - generic [ref=e164]: 美食
+                - generic [ref=e166]: 咖啡与可颂的小停留
+                - generic [ref=e167]: Overlay 花生酱拿铁；Lune 杏仁可颂。按当天精力选择。
+              - generic [ref=e168]:
+                - generic [ref=e169]: Overlay Coffee Melbourne
+                - generic [ref=e170]:
+                  - button "导航：Overlay Coffee Melbourne" [ref=e171] [cursor=pointer]: 导航
+                  - button "标记完成：咖啡与可颂的小停留" [ref=e174] [cursor=pointer]:
+                    - generic [ref=e175]: ○
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]: 14:00
+              - generic [ref=e179]: 计划时间
+            - generic [ref=e183]:
+              - button "查看办理入住，休息一下" [ref=e184] [cursor=pointer]:
+                - generic [ref=e185]: 住宿
+                - generic [ref=e187]: 办理入住，休息一下
+                - generic [ref=e188]: 回盛橡办理入住、洗澡休息。早餐：飞机餐／机场简单补充。午餐：12:00 Operator25。晚餐：St Kilda附近自行选择。
+              - generic [ref=e189]:
+                - generic [ref=e190]: Oaks Melbourne on William Suites
+                - generic [ref=e191]:
+                  - button "导航：Oaks Melbourne on William Suites" [ref=e192] [cursor=pointer]: 导航
+                  - button "标记完成：办理入住，休息一下" [ref=e195] [cursor=pointer]:
+                    - generic [ref=e196]: ○
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]: 16:00
+              - generic [ref=e200]: 计划时间
+            - generic [ref=e204]:
+              - button "查看向 St Kilda 海边出发" [ref=e205] [cursor=pointer]:
+                - generic [ref=e206]: 交通
+                - generic [ref=e208]: 向 St Kilda 海边出发
+                - generic [ref=e209]: 盛橡 → St Kilda Pier：步行至Bourke St/Spencer St附近96路站，乘往St Kilda Beach方向电车，下车步行至码头；全程预留45–60分钟。也可打车，按实时路况。原1/109路不采用。 备选：直接导航St Kilda Pier打车；车程、费用按当日软件，不沿用原4.9km估算。
+              - generic [ref=e210]:
+                - generic [ref=e211]: St Kilda Pier Melbourne
+                - generic [ref=e212]:
+                  - button "导航：St Kilda Pier Melbourne" [ref=e213] [cursor=pointer]: 导航
+                  - button "标记完成：向 St Kilda 海边出发" [ref=e216] [cursor=pointer]:
+                    - generic [ref=e217]: ○
+          - generic [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: 17:00
+              - generic [ref=e221]: 计划时间
+            - generic [ref=e225]:
+              - button "查看St Kilda Pier · 看海与日落" [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: 探索
+                - generic [ref=e229]: St Kilda Pier · 看海与日落
+                - generic [ref=e230]: 17:00抵达。提前半小时到，蓝调时刻在日落后15-45分钟 拍照【1】St Kilda Pier 企鹅场次尚未约到，用户会持续关注；未取得预约前不按已订场次执行。约到后再衔接晚餐，未约到则海边散步、吃饭后回酒店。
+              - generic [ref=e231]:
+                - generic [ref=e232]: St Kilda Pier Melbourne
+                - generic [ref=e233]:
+                  - button "导航：St Kilda Pier Melbourne" [ref=e234] [cursor=pointer]: 导航
+                  - button "标记完成：St Kilda Pier · 看海与日落" [ref=e237] [cursor=pointer]:
+                    - generic [ref=e238]: ○
+          - generic [ref=e239]:
+            - generic [ref=e240]:
+              - generic [ref=e241]: 待安排
+              - generic [ref=e242]: 备选
+            - generic [ref=e246]:
+              - button "查看企鹅归巢 · 可选活动" [ref=e247] [cursor=pointer]:
+                - generic [ref=e248]:
+                  - generic [ref=e249]: 探索
+                  - generic [ref=e250]: 可选行程
+                - generic [ref=e251]: 企鹅归巢 · 可选活动
+                - generic [ref=e252]: 企鹅场次尚未约到，用户会持续关注；未取得预约前不按已订场次执行。约到后再衔接晚餐，未约到则海边散步、吃饭后回酒店。
+              - generic [ref=e253]:
+                - generic [ref=e254]: St Kilda Pier Melbourne
+                - generic [ref=e255]:
+                  - button "导航：St Kilda Pier Melbourne" [ref=e256] [cursor=pointer]: 导航
+                  - button "标记完成：企鹅归巢 · 可选活动" [ref=e259] [cursor=pointer]:
+                    - generic [ref=e260]: ○
+          - generic [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263]: 待安排
+              - generic [ref=e264]: 按顺序游览
+            - generic [ref=e268]:
+              - button "查看晚餐 · St Kilda 就近选择" [ref=e269] [cursor=pointer]:
+                - generic [ref=e270]: 美食
+                - generic [ref=e272]: 晚餐 · St Kilda 就近选择
+                - generic [ref=e273]: 晚餐备选：Republica St Kilda Beach、McDonald’s、Donovans，按企鹅场次与当日营业情况灵活选择，均未视为已预约。原Max晚餐不执行，已移至9/27 12:00午餐。
+              - generic [ref=e274]:
+                - generic [ref=e275]: St Kilda Beach Melbourne
+                - generic [ref=e276]:
+                  - button "导航：St Kilda Beach Melbourne" [ref=e277] [cursor=pointer]: 导航
+                  - button "标记完成：晚餐 · St Kilda 就近选择" [ref=e280] [cursor=pointer]:
+                    - generic [ref=e281]: ○
+          - generic [ref=e282]:
+            - generic [ref=e283]:
+              - generic [ref=e284]: 待安排
+              - generic [ref=e285]: 按顺序游览
+            - generic [ref=e289]:
+              - button "查看超市补给，回酒店" [ref=e290] [cursor=pointer]:
+                - generic [ref=e291]: 购物
+                - generic [ref=e293]: 超市补给，回酒店
+                - generic [ref=e294]: 住宿：盛橡 Oaks Melbourne on William Suites（350 William St）。回房休息，次日早餐在维妈市场解决。 超市补给按体力决定，Coles资料见原备注。 次日补给（按9/27行程推算）：白天维妈市场→州立图书馆→皇家拱廊→福林德车站→NGV基本全程步行，12:00 Max午餐到18:45 Palermo晚餐之间隔近7小时，备每人1–2瓶水和耐放小食。早餐在维妈市场吃，不用买。原表记Coles营业6:00–23:00。
+              - generic [ref=e295]:
+                - generic [ref=e296]: Coles Melbourne CBD
+                - generic [ref=e297]:
+                  - button "导航：Coles Melbourne CBD" [ref=e298] [cursor=pointer]: 导航
+                  - button "标记完成：超市补给，回酒店" [ref=e301] [cursor=pointer]:
+                    - generic [ref=e302]: ○
+      - button "下一项 · 09.25 12:30 出发前往浦东机场 T2 →" [ref=e303] [cursor=pointer]:
+        - generic [ref=e306]: 下一项 · 09.25 12:30 出发前往浦东机场 T2
+        - generic [ref=e307]: →
+      - generic [ref=e308]:
+        - generic [ref=e309]: MADE FOR YOUR LITTLE ADVENTURE
+        - generic [ref=e310]: 来自飞书计划 · 旅行当地时间 · 本地保存
+  - generic [ref=e311]:
+    - button "每日行程" [ref=e312] [cursor=pointer]
+    - button "旅途全览" [ref=e317] [cursor=pointer]
+    - button "行前清单" [ref=e321] [cursor=pointer]
+    - button "提醒核对" [ref=e325] [cursor=pointer]
+  - generic [ref=e330]:
+    - button "关闭详情" [ref=e331] [cursor=pointer]: ×
+    - generic [ref=e333]:
+      - generic [ref=e334]: 2026-09-26 · 墨尔本当地时间
+      - generic [ref=e335]: St Kilda Pier · 看海与日落
+      - generic [ref=e336]: 探索
+      - generic [ref=e337]:
+        - generic [ref=e338]: 拍照机位
+        - generic [ref=e339]: 你的拍照笔记 · 以现场开放区域为准
+        - generic [ref=e340]:
+          - generic [ref=e341]:
+            - generic [ref=e342]: "01"
+            - generic [ref=e343]: 码头步道：用栏杆与步道作为引导线，人物放在画面侧边。
+          - generic [ref=e344]:
+            - generic [ref=e345]: "02"
+            - generic [ref=e346]: 原攻略建议提前抵达，并留意日落后的蓝调时刻。
+        - generic [ref=e347]:
+          - text: 实景参考
+          - generic [ref=e348]: 点击放大
+        - generic [ref=e349]:
+          - generic "放大查看St Kilda Pier · 看海与日落 · 你的参考图 1" [ref=e350]
+          - generic [ref=e352]: St Kilda Pier · 看海与日落 · 你的参考图 1
+        - generic [ref=e353]:
+          - generic "放大查看St Kilda Pier · 看海与日落 · 你的参考图 2" [ref=e354]
+          - generic [ref=e356]: St Kilda Pier · 看海与日落 · 你的参考图 2
+        - generic [ref=e357]:
+          - generic "放大查看St Kilda Pier · 看海与日落 · 你的参考图 3" [ref=e358]
+          - generic [ref=e360]: St Kilda Pier · 看海与日落 · 你的参考图 3
+      - generic [ref=e361]: 17:00抵达。提前半小时到，蓝调时刻在日落后15-45分钟 拍照【1】St Kilda Pier 企鹅场次尚未约到，用户会持续关注；未取得预约前不按已订场次执行。约到后再衔接晚餐，未约到则海边散步、吃饭后回酒店。

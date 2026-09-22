@@ -54,7 +54,7 @@ test('revision 946 has new flights, reservations and no retired execution routes
  assert.ok(!days[7].events.some(e=>/Coogee|Watsons/.test(e.place||'')))
  assert.equal(days[3].events[0].time,null)
  assert.equal(days[3].events[0].place,"206 A'Beckett St Melbourne")
- assert.equal(days[4].events.length,7)
+ assert.equal(days[4].events.length,8) // 7 imported plans plus the added resupply stop
  assert.ok(days[7].events.every(e=>e.tentative))
  const calendar=ics(days).replace(/\r\n /g,'')
  for(const e of days.flatMap(d=>d.events).filter(e=>e.tentative)) assert.ok(!calendar.includes(`UID:${e.id}@`))
@@ -63,6 +63,44 @@ test('revision 946 has new flights, reservations and no retired execution routes
  assert.equal(eventInstant(days[8],departure).toISOString(),'2026-10-03T01:00:00.000Z')
  assert.equal(eventInstant(days[8],arrival).toISOString(),'2026-10-03T11:25:00.000Z')
  assert.equal(nextEvent([days[7]],new Date('2026-10-01T20:00:00Z')),null)
+})
+
+test('the Great Ocean Road tour follows the five stops the operator confirmed',()=>{
+ const tour=days[3].events.filter(e=>/第 \d 站/.test(e.title))
+ assert.deepEqual(tour.map(e=>e.place),['Twelve Apostles Victoria','Gibson Steps Victoria','Loch Ard Gorge Victoria','Great Ocean Road Wildlife Park','Apollo Bay Victoria'])
+ // The wildlife park costs extra and can be skipped, so it must never drive a reminder.
+ assert.ok(tour.find(e=>e.place==='Great Ocean Road Wildlife Park').optional)
+ // The operator gave no times for any stop, so none may look scheduled.
+ for(const e of days[3].events) assert.equal(e.time,null,e.title)
+ // Stops the original table listed but the operator's itinerary dropped.
+ for(const gone of ['Great Ocean Road Memorial Arch']) assert.ok(!days[3].events.some(e=>e.place===gone),gone)
+ for(const gone of ['Light-Cradling Nook','小红帽灯塔','寻找野生考拉']) assert.ok(!days[3].events.some(e=>e.title.includes(gone)),gone)
+ // Retired IDs must not be reused, or a stale completion tick would land on a different stop.
+ const ids=new Set(days.flatMap(d=>d.events.map(e=>e.id)))
+ for(const retired of ['2026-09-28-4','2026-09-28-6','2026-09-28-7','2026-09-28-8']) assert.ok(!ids.has(retired),retired)
+ assert.match(days[3].events[0].note,/在这里下车/)
+})
+
+test('each staying night ends with an untimed resupply stop that stays out of the calendar',()=>{
+ // 9/25 is an overnight flight and 10/03 flies home, so neither has a supermarket run.
+ const expected={'2026-09-26':'Coles Melbourne CBD','2026-09-27':'Coles Melbourne CBD','2026-09-28':'Coles Melbourne CBD',
+  '2026-09-29':'Coles Melbourne CBD','2026-09-30':'Coles World Square Sydney','2026-10-02':'Coles World Square Sydney'}
+ const calendar=ics(days).replace(/\r\n /g,'')
+ for(const [date,place] of Object.entries(expected)) {
+  const day=days.find(d=>d.date===date)
+  const last=day.events[day.events.length-1]
+  assert.equal(last.type,'shop',date)
+  assert.equal(last.place,place,date)
+  assert.match(last.title,/补给/,date)
+  // Restocking happens whenever they get back, so it must not fire a reminder or export an event.
+  assert.equal(last.time,null,date)
+  assert.ok(!calendar.includes(`UID:${last.id}@`),date)
+  assert.match(last.note,/次日补给/,date)
+ }
+ for(const date of ['2026-09-25','2026-10-03']) {
+  const day=days.find(d=>d.date===date)
+  assert.ok(!day.events.some(e=>/补给/.test(e.title)),date)
+ }
 })
 
 test('full snapshots and all active source links agree on revision 946',()=>{

@@ -6,11 +6,12 @@ module.exports = {
   deviceRatio: { 390: 750 / 390, 640: 2.34 / 2, 750: 1, 828: 1.81 / 2 },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV || 'weapp'}`,
+  // The mini-program main package is capped at 2 MB, so weapp reads guide photos from WeChat cloud
+  // storage instead (see src/media.js and data/media-manifest.json). H5 has no cap and keeps a copy.
   copy: {
-    patterns: [{
-      from: `src/guide-media/${process.env.TARO_ENV === 'h5' ? 'h5' : 'weapp'}`,
-      to: `dist/${process.env.TARO_ENV || 'weapp'}/guide-media`
-    }]
+    patterns: process.env.TARO_ENV === 'h5'
+      ? [{ from: 'src/guide-media/h5', to: 'dist/h5/guide-media' }]
+      : []
   },
   framework: 'react',
   compiler: 'webpack5',

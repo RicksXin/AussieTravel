@@ -186,10 +186,10 @@
     "source": "https://www.xiaohongshu.com/explore/6a8cdd55000000002b00fb57",
     "author": "叮当的学游记",
     "title": "悉尼周边｜一边悬崖一边大海的海上大桥",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-09-22",
     "notes": "正文提及桥面人行道，但 3 张照片均为非正式山坡野径视角。与应用当前桥面步道方案不匹配，不作应用推荐机位图。",
     "images": [],
-    "status": "已检索并排除当前图片；仍缺桥面步道实拍"
+    "status": "再次检索桥上拍照、walk 桥面和人行道，核对的笔记仍为山坡俯拍；桥面步道实拍暂缺。"
   },
   {
     "place": "Sydney Opera House · Opera Bar",
@@ -361,5 +361,85 @@
       }
     ],
     "status": "正文与第 1–2 张图已核对，保存第 2 张；共 18 张"
+  },
+  {
+    "place": "Bendeela Recreation Area",
+    "source": "https://www.xiaohongshu.com/explore/6a995dd5000000002900d72c",
+    "author": "RandallZxx",
+    "title": "露营看袋熊",
+    "checkedAt": "2026-09-22",
+    "notes": "作者在 Bendeela Recreation Area 拍摄的袋熊与草地。仅采用已核对的环境图，不将个人观察的出现时间、门票和开放安排当作保证。",
+    "photographySuggestion": "从开放区域用长焦或手机变焦记录袋熊与草地，保留动物周围空间；不追逐、触摸或靠近合影。",
+    "suggestionOrigin": "根据已核对照片整理的远距离观察构图建议。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/bendeela-wombat.jpg",
+        "index": 1,
+        "caption": "Bendeela 草地上的袋熊 · 观察参考",
+        "kind": "landscape"
+      }
+    ],
+    "status": "已核对正文与第 1 张图，共 16 张，下载封面静态图。"
+  },
+  {
+    "place": "Great Ocean Road Memorial Arch",
+    "source": "https://www.xiaohongshu.com/explore/69dc800a000000001d019716",
+    "author": "萌二biuのmax",
+    "title": "大洋路起点｜在纪念拱门接住第一场海风🌊",
+    "checkedAt": "2026-09-22",
+    "notes": "正文定位 Memorial arch carpark；封面为路旁栏杆内侧合影。不额外采用未经核实的历史年数或新增路线。",
+    "photographySuggestion": "站在路旁停留区的栏杆内，身体略侧、抬一只手作托住门牌的动作；镜头稍向上，完整保留 GREAT OCEAN ROAD 字样。",
+    "suggestionOrigin": "根据封面已核对的人像姿势整理。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/memorial-arch-pose.jpg",
+        "index": 1,
+        "caption": "纪念拱门旁举手合影 · 路旁停留区",
+        "kind": "pose"
+      }
+    ],
+    "status": "已核对正文与封面，共 5 张，下载第 1 张。"
+  },
+  {
+    "place": "Chickorea Melbourne",
+    "source": "https://www.xiaohongshu.com/explore/6a2d195b000000003502d19e",
+    "author": "肥咪日记",
+    "title": "🇦🇺终于吃到网传墨尔本最好吃的炸鸡啦",
+    "checkedAt": "2026-09-22",
+    "recommendations": [
+      "Chickorea · Boneless Chicken 无骨炸鸡"
+    ],
+    "notes": "作者推荐外酥内嫩的无骨炸鸡，但不喜欢 Cream Onion 酱的后味；原攻略对该酱评价相反，属于个人口味差异。图片包含这份酱，仅作口味参考。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/chickorea-chicken.jpg",
+        "index": 1,
+        "caption": "Chickorea · 无骨炸鸡与 Cream Onion 酱（口味评价有分歧）",
+        "kind": "dish"
+      }
+    ],
+    "status": "核对正文和第 1 张图，共 4 张，下载封面。",
+    "tasteNote": "Chickorea：食客推荐无骨炸鸡的酥脆口感；Cream Onion 酱评价有分歧，这篇食记觉得后味偏苦，原攻略则更喜欢它，可按口味选酱。"
+  },
+  {
+    "place": "Donovans St Kilda",
+    "source": "https://www.xiaohongshu.com/explore/67fcaf99000000001a00734b",
+    "author": "Evelyn-2026版🎀",
+    "title": "Donovans| 一顿饭吃出度假感🏝️⛱️",
+    "checkedAt": "2026-09-22",
+    "recommendations": [
+      "Donovans · Chicken Liver 鸡肝酱配面包"
+    ],
+    "notes": "笔记地址 40 Jacka Blvd, St Kilda。第 3 张明确标注 Chicken Liver，作者推荐涂面包吃；总体评价口味较淡。此为 2025 年探店菜品参考，按到店菜单选择，保留晚餐备选状态。",
+    "images": [
+      {
+        "file": "xiaohongshu-images/donovans-liver.jpg",
+        "index": 3,
+        "caption": "Donovans · Chicken Liver 鸡肝酱配面包",
+        "kind": "dish"
+      }
+    ],
+    "status": "已核对正文及第 1–3 张图，共 13 张；保存第 3 张。",
+    "tasteNote": "Donovans：食客推荐鸡肝酱涂面包吃，整体口味偏淡。来自 2025 年探店，供晚餐备选时参考。"
   }
 ]

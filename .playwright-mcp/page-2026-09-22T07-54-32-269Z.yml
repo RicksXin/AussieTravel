@@ -1,0 +1,263 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e11]:
+        - text: 澳游
+        - generic [ref=e12]: AUSSIE DAYS
+      - generic [ref=e14]:
+        - generic [ref=e15]: 墨尔本 → 悉尼
+        - generic [ref=e16]: 9.25 — 10.03 · 澳大利亚
+      - generic [ref=e18]:
+        - button "2026-09-25 上海 → 吉隆坡" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: "09.25"
+          - generic [ref=e21]: 上海
+        - button "2026-09-26 墨尔本" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: "09.26"
+          - generic [ref=e24]: 墨尔本
+        - button "2026-09-27 墨尔本" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: "09.27"
+          - generic [ref=e27]: 墨尔本
+        - button "2026-09-28 大洋路" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "09.28"
+          - generic [ref=e30]: 大洋路
+        - button "2026-09-29 墨尔本" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: "09.29"
+          - generic [ref=e33]: 自由日
+        - button "2026-09-30 墨尔本 → 悉尼" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: "09.30"
+          - generic [ref=e36]: 悉尼
+        - button "2026-10-01 Kiama · 悉尼南线" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: "10.01"
+          - generic [ref=e39]: Kiama
+        - button "2026-10-02 悉尼" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: "10.02"
+          - generic [ref=e42]: 悉尼
+        - button "2026-10-03 悉尼 → 上海" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: "10.03"
+          - generic [ref=e45]: 返程
+    - generic [ref=e46]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: 转场悉尼，赴一场音乐剧
+            - generic [ref=e52]: JQ516 13:55–15:20 · 17:30晚餐 · 19:30 My Fair Lady
+          - generic [ref=e53]: 0/13 已完成
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - button "全部" [ref=e57] [cursor=pointer]
+            - button "探索" [ref=e58] [cursor=pointer]
+            - button "美食" [ref=e59] [cursor=pointer]
+            - button "交通" [ref=e60] [cursor=pointer]
+            - button "航班" [ref=e61] [cursor=pointer]
+            - button "住宿" [ref=e62] [cursor=pointer]
+            - button "购物" [ref=e63] [cursor=pointer]
+          - button "原备注 ↗" [ref=e64] [cursor=pointer]
+        - generic "搜索当天行程" [ref=e68]:
+          - textbox "搜索当天景点、餐厅、备注…" [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e331]: 待安排
+              - generic [ref=e332]: 按顺序游览
+            - generic [ref=e336]:
+              - button "查看起床，整理行李" [ref=e337] [cursor=pointer]:
+                - generic [ref=e338]: 住宿
+                - generic [ref=e340]: 起床，整理行李
+                - generic [ref=e341]: 不安排景点；梳洗、检查房间与行李。盛橡官网10:00退房，若希望更晚起床须酒店确认延迟退房。 09:00–10:00收拾、退房；10:00–10:45在盛橡／Southern Cross附近 café 吃早午餐。早餐午餐合并；机场可补小食。
+              - generic [ref=e342]:
+                - generic [ref=e343]: Oaks Melbourne on William Suites
+                - generic [ref=e344]:
+                  - button "导航：Oaks Melbourne on William Suites" [ref=e345] [cursor=pointer]: 导航
+                  - button "标记完成：起床，整理行李" [ref=e348] [cursor=pointer]:
+                    - generic [ref=e349]: ○
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]: 10:45
+              - generic [ref=e353]: 计划时间
+            - generic [ref=e357]:
+              - button "查看前往墨尔本机场" [ref=e358] [cursor=pointer]:
+                - generic [ref=e359]: 交通
+                - generic [ref=e361]: 前往墨尔本机场
+                - generic [ref=e362]: 盛橡 → Southern Cross SkyBus站：步行约20分钟；搭Melbourne City Express到机场，含候车及交通预留60–75分钟，目标11:45–12:00抵达。备选直接打车；航站楼按新机票确认。https://www.skybus.com.au/melbourne-city-express/buy-tickets/
+              - generic [ref=e363]:
+                - generic [ref=e364]: Melbourne Airport Terminal 4
+                - generic [ref=e365]:
+                  - button "导航：Melbourne Airport Terminal 4" [ref=e366] [cursor=pointer]: 导航
+                  - button "标记完成：前往墨尔本机场" [ref=e369] [cursor=pointer]:
+                    - generic [ref=e370]: ○
+          - generic [ref=e371]:
+            - generic [ref=e372]:
+              - generic [ref=e373]: 11:45
+              - generic [ref=e374]: 计划时间
+            - generic [ref=e378]:
+              - button "查看T4 值机与行李托运" [ref=e379] [cursor=pointer]:
+                - generic [ref=e380]: 航班
+                - generic [ref=e382]: T4 值机与行李托运
+                - generic [ref=e383]: JQ516，墨尔本T4出发；每人行李额25kg（用户确认）。随身行李额度另按订单核对，不沿用原20kg假设。 JQ516 13:55起飞，目标11:45–12:00抵达墨尔本T4；办理值机、托运和安检，柜台及登机口关闭时间以订单／航司通知为准。
+              - generic [ref=e384]:
+                - generic [ref=e385]: Melbourne Airport Terminal 4
+                - generic [ref=e386]:
+                  - button "导航：Melbourne Airport Terminal 4" [ref=e387] [cursor=pointer]: 导航
+                  - button "标记完成：T4 值机与行李托运" [ref=e390] [cursor=pointer]:
+                    - generic [ref=e391]: ○
+          - generic [ref=e392]:
+            - generic [ref=e393]:
+              - generic [ref=e394]: 13:55
+              - generic [ref=e395]: 计划时间
+            - generic [ref=e399]:
+              - button "查看JQ516 · 墨尔本T4 → 悉尼T2" [ref=e400] [cursor=pointer]:
+                - generic [ref=e401]: 航班
+                - generic [ref=e403]: JQ516 · 墨尔本T4 → 悉尼T2
+                - generic [ref=e404]: JQ516：13:55墨尔本机场T4起飞，15:20抵达悉尼金斯福德史密斯机场T2，均为当地时间；每人行李额25kg（用户确认）。
+              - generic [ref=e405]:
+                - generic [ref=e406]: Melbourne Airport Terminal 4
+                - generic [ref=e407]:
+                  - button "导航：Melbourne Airport Terminal 4" [ref=e408] [cursor=pointer]: 导航
+                  - button "标记完成：JQ516 · 墨尔本T4 → 悉尼T2" [ref=e411] [cursor=pointer]:
+                    - generic [ref=e412]: ○
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e415]: 16:00
+              - generic [ref=e416]: 计划时间
+            - generic [ref=e420]:
+              - button "查看悉尼机场 → 市区" [ref=e421] [cursor=pointer]:
+                - generic [ref=e422]: 交通
+                - generic [ref=e424]: 悉尼机场 → 市区
+                - generic [ref=e425]: 已确认抵达悉尼机场T2：到Domestic Airport Station乘T8往市区至Museum，步行至Song Hotel；含候车步行预留35–50分钟，行李多可打车。
+              - generic [ref=e426]:
+                - generic [ref=e427]: Song Hotel Sydney
+                - generic [ref=e428]:
+                  - button "导航：Song Hotel Sydney" [ref=e429] [cursor=pointer]: 导航
+                  - button "标记完成：悉尼机场 → 市区" [ref=e432] [cursor=pointer]:
+                    - generic [ref=e433]: ○
+          - generic [ref=e434]:
+            - generic [ref=e435]:
+              - generic [ref=e436]: 16:45
+              - generic [ref=e437]: 计划时间
+            - generic [ref=e441]:
+              - button "查看到酒店，办理入住" [ref=e442] [cursor=pointer]:
+                - generic [ref=e443]: 住宿
+                - generic [ref=e445]: 到酒店，办理入住
+                - generic [ref=e446]: Song Hotel Sydney，5–11 Wentworth Ave, Sydney NSW 2000；9/30–10/3连住3晚。14:00起入住，11:00前退房；含早餐07:00–10:30。放行李、换装、携演出票出门。https://www.songhotels.com.au/rooms/
+              - generic [ref=e447]:
+                - generic [ref=e448]: Song Hotel Sydney
+                - generic [ref=e449]:
+                  - button "导航：Song Hotel Sydney" [ref=e450] [cursor=pointer]: 导航
+                  - button "标记完成：到酒店，办理入住" [ref=e453] [cursor=pointer]:
+                    - generic [ref=e454]: ○
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - generic [ref=e457]: 17:15
+              - generic [ref=e458]: 计划时间
+            - generic [ref=e462]:
+              - button "查看步行前往 Hello Auntie" [ref=e463] [cursor=pointer]:
+                - generic [ref=e464]: 交通
+                - generic [ref=e466]: 步行前往 Hello Auntie
+                - generic [ref=e467]: 入住、放行李后步行前往Hello Auntie Darling Square；按导航预留15–20分钟，争取17:20到店，17:30预约。当天不安排Market City购物。
+              - generic [ref=e468]:
+                - generic [ref=e469]: Hello Auntie Darling Square
+                - generic [ref=e470]:
+                  - button "导航：Hello Auntie Darling Square" [ref=e471] [cursor=pointer]: 导航
+                  - button "标记完成：步行前往 Hello Auntie" [ref=e474] [cursor=pointer]:
+                    - generic [ref=e475]: ○
+          - generic [ref=e476]:
+            - generic [ref=e477]:
+              - generic [ref=e478]: 17:30
+              - generic [ref=e479]: 计划时间
+            - generic [ref=e483]:
+              - button "查看晚餐 · Hello Auntie" [ref=e484] [cursor=pointer]:
+                - generic [ref=e485]: 美食
+                - generic [ref=e487]: 晚餐 · Hello Auntie
+                - generic [ref=e488]: 9/30 17:30 Hello Auntie。需提前至少24小时取消，否则扣50澳元（用户提供，未注明按人计费）；取消截止9/29 17:30悉尼当地时间。入座时告知19:30演出，建议18:15前结束，留出赴歌剧院时间。
+              - generic [ref=e489]:
+                - generic [ref=e490]: Hello Auntie Darling Square
+                - generic [ref=e491]:
+                  - button "导航：Hello Auntie Darling Square" [ref=e492] [cursor=pointer]: 导航
+                  - button "标记完成：晚餐 · Hello Auntie" [ref=e495] [cursor=pointer]:
+                    - generic [ref=e496]: ○
+          - generic [ref=e497]:
+            - generic [ref=e498]:
+              - generic [ref=e499]: 18:15
+              - generic [ref=e500]: 计划时间
+            - generic [ref=e504]:
+              - button "查看前往悉尼歌剧院" [ref=e505] [cursor=pointer]:
+                - generic [ref=e506]: 交通
+                - generic [ref=e508]: 前往悉尼歌剧院
+                - generic [ref=e509]: 建议18:15前从Hello Auntie出发，打车到歌剧院允许下客处后步行，预留约45分钟，目标19:00到场；备选步行至Museum乘往Circular Quay列车，再步行至剧院，按实时导航决定。
+              - generic [ref=e510]:
+                - generic [ref=e511]: Sydney Opera House
+                - generic [ref=e512]:
+                  - button "导航：Sydney Opera House" [ref=e513] [cursor=pointer]: 导航
+                  - button "标记完成：前往悉尼歌剧院" [ref=e516] [cursor=pointer]:
+                    - generic [ref=e517]: ○
+          - generic [ref=e518]:
+            - generic [ref=e519]:
+              - generic [ref=e520]: 19:00
+              - generic [ref=e521]: 计划时间
+            - generic [ref=e525]:
+              - button "查看歌剧院安检、入场" [ref=e526] [cursor=pointer]:
+                - generic [ref=e527]: 探索
+                - generic [ref=e529]: 歌剧院安检、入场
+                - generic [ref=e530]: My Fair Lady；Joan Sutherland Theatre；座位V42、V43（用户确认）。19:00到场，按电子票指引安检、入场及就座；19:30开演。
+              - generic [ref=e531]:
+                - generic [ref=e532]: Sydney Opera House
+                - generic [ref=e533]:
+                  - button "导航：Sydney Opera House" [ref=e534] [cursor=pointer]: 导航
+                  - button "标记完成：歌剧院安检、入场" [ref=e537] [cursor=pointer]:
+                    - generic [ref=e538]: ○
+          - generic [ref=e539]:
+            - generic [ref=e540]:
+              - generic [ref=e541]: 19:30
+              - generic [ref=e542]: 计划时间
+            - generic [ref=e546]:
+              - button "查看My Fair Lady · V42、V43" [ref=e547] [cursor=pointer]:
+                - generic [ref=e548]: 探索
+                - generic [ref=e550]: My Fair Lady · V42、V43
+                - generic [ref=e551]: 19:30开演；Seats V42、V43。提前下载电子票，结束时间以演出票／主办方信息为准。若航班延误，压缩休息及晚餐，尽量保留入场缓冲。
+              - generic [ref=e552]:
+                - generic [ref=e553]: Joan Sutherland Theatre Sydney Opera House
+                - generic [ref=e554]:
+                  - button "导航：Joan Sutherland Theatre Sydney Opera House" [ref=e555] [cursor=pointer]: 导航
+                  - button "标记完成：My Fair Lady · V42、V43" [ref=e558] [cursor=pointer]:
+                    - generic [ref=e559]: ○
+          - generic [ref=e560]:
+            - generic [ref=e561]:
+              - generic [ref=e562]: 待安排
+              - generic [ref=e563]: 按顺序游览
+            - generic [ref=e567]:
+              - button "查看散场后返回 Song Hotel" [ref=e568] [cursor=pointer]:
+                - generic [ref=e569]: 住宿
+                - generic [ref=e571]: 散场后返回 Song Hotel
+                - generic [ref=e572]: 步行回Circular Quay乘市区列车至Museum，再步行回酒店；夜间疲劳可打车。预留30–45分钟，住宿Song Hotel。
+              - generic [ref=e573]:
+                - generic [ref=e574]: Song Hotel Sydney
+                - generic [ref=e575]:
+                  - button "导航：Song Hotel Sydney" [ref=e576] [cursor=pointer]: 导航
+                  - button "标记完成：散场后返回 Song Hotel" [ref=e579] [cursor=pointer]:
+                    - generic [ref=e580]: ○
+          - generic [ref=e581]:
+            - generic [ref=e582]:
+              - generic [ref=e583]: 当天决定
+              - generic [ref=e584]: 自由安排
+            - generic [ref=e588]:
+              - button "查看超市补给 · 备好次日包车零食" [ref=e589] [cursor=pointer]:
+                - generic [ref=e590]: 购物
+                - generic [ref=e592]: 超市补给 · 备好次日包车零食
+                - generic [ref=e593]: 次日补给（原表已写明）：原表这一格就是「Coles World Square · 明天包车零食」，并提醒零食提前备好、不为购物熬夜。Coles World Square 营业 6:00–00:00（原表），歌剧院散场后仍可顺路，但别为此熬夜。 清单：车上零食与饮用水（10/1 全天在包车上，停留点少且分散）、纸巾湿巾。原表 10/1 准备栏另列晕车药（出发前半小时吃）、防晒、雨伞、驱蚊与一个大购物袋，缺哪样今晚一并补。 早餐由 Song Hotel 提供（08:15 用餐），不用买。
+              - generic [ref=e594]:
+                - generic [ref=e595]: Coles World Square Sydney
+                - generic [ref=e596]:
+                  - button "导航：Coles World Square Sydney" [ref=e597] [cursor=pointer]: 导航
+                  - button "标记完成：超市补给 · 备好次日包车零食" [ref=e600] [cursor=pointer]:
+                    - generic [ref=e601]: ○
+      - button "下一项 · 09.25 12:30 出发前往浦东机场 T2 →" [ref=e303] [cursor=pointer]:
+        - generic [ref=e306]: 下一项 · 09.25 12:30 出发前往浦东机场 T2
+        - generic [ref=e307]: →
+      - generic [ref=e308]:
+        - generic [ref=e309]: MADE FOR YOUR LITTLE ADVENTURE
+        - generic [ref=e310]: 来自飞书计划 · 旅行当地时间 · 本地保存
+  - generic [ref=e311]:
+    - button "每日行程" [ref=e312] [cursor=pointer]
+    - button "旅途全览" [ref=e317] [cursor=pointer]
+    - button "行前清单" [ref=e321] [cursor=pointer]
+    - button "提醒核对" [ref=e325] [cursor=pointer]

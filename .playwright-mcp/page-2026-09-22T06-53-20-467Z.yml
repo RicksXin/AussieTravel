@@ -1,0 +1,203 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e11]:
+        - text: 澳游
+        - generic [ref=e12]: AUSSIE DAYS
+      - generic [ref=e14]:
+        - generic [ref=e15]: 墨尔本
+        - generic [ref=e16]: 9.25 — 10.03 · 澳大利亚
+      - generic [ref=e18]:
+        - button "2026-09-25 上海 → 吉隆坡" [ref=e19] [cursor=pointer]:
+          - generic [ref=e20]: "09.25"
+          - generic [ref=e21]: 上海
+        - button "2026-09-26 墨尔本" [ref=e22] [cursor=pointer]:
+          - generic [ref=e23]: "09.26"
+          - generic [ref=e24]: 墨尔本
+        - button "2026-09-27 墨尔本" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: "09.27"
+          - generic [ref=e27]: 墨尔本
+        - button "2026-09-28 大洋路" [ref=e28] [cursor=pointer]:
+          - generic [ref=e29]: "09.28"
+          - generic [ref=e30]: 大洋路
+        - button "2026-09-29 墨尔本" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]: "09.29"
+          - generic [ref=e33]: 自由日
+        - button "2026-09-30 墨尔本 → 悉尼" [ref=e34] [cursor=pointer]:
+          - generic [ref=e35]: "09.30"
+          - generic [ref=e36]: 悉尼
+        - button "2026-10-01 Kiama · 悉尼南线" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: "10.01"
+          - generic [ref=e39]: Kiama
+        - button "2026-10-02 悉尼" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: "10.02"
+          - generic [ref=e42]: 悉尼
+        - button "2026-10-03 悉尼 → 上海" [ref=e43] [cursor=pointer]:
+          - generic [ref=e44]: "10.03"
+          - generic [ref=e45]: 返程
+    - generic [ref=e46]:
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - generic [ref=e51]: 把城市，走成风景
+            - generic [ref=e52]: 不早起，慢慢逛；12:00 Max 午餐，18:45 Palermo 晚餐。
+          - generic [ref=e53]: 0/9 已完成
+        - generic [ref=e54]:
+          - generic [ref=e56]:
+            - button "全部" [ref=e57] [cursor=pointer]
+            - button "探索" [ref=e58] [cursor=pointer]
+            - button "美食" [ref=e59] [cursor=pointer]
+            - button "交通" [ref=e60] [cursor=pointer]
+            - button "航班" [ref=e61] [cursor=pointer]
+            - button "住宿" [ref=e62] [cursor=pointer]
+            - button "购物" [ref=e63] [cursor=pointer]
+          - button "原备注 ↗" [ref=e64] [cursor=pointer]
+        - generic "搜索当天行程" [ref=e68]:
+          - textbox "搜索当天景点、餐厅、备注…" [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e329]:
+            - generic [ref=e330]:
+              - generic [ref=e331]: 待安排
+              - generic [ref=e332]: 按顺序游览
+            - generic [ref=e336]:
+              - button "查看维多利亚女王市场" [ref=e337] [cursor=pointer]:
+                - generic [ref=e338]: 探索
+                - generic [ref=e340]: 维多利亚女王市场
+                - generic [ref=e341]: 步行约 850 米，途经 Flagstaff Gardens。青口贝、澳白、果酱甜甜圈、德国热狗按喜好选择。
+              - generic [ref=e342]:
+                - generic [ref=e343]: Queen Victoria Market Melbourne
+                - generic [ref=e344]:
+                  - button "导航：Queen Victoria Market Melbourne" [ref=e345] [cursor=pointer]: 导航
+                  - button "标记完成：维多利亚女王市场" [ref=e348] [cursor=pointer]:
+                    - generic [ref=e349]: ○
+          - generic [ref=e350]:
+            - generic [ref=e351]:
+              - generic [ref=e352]: 12:00
+              - generic [ref=e353]: 计划时间
+            - generic [ref=e357]:
+              - button "查看午餐 · Max on Hardware（已预约）" [ref=e358] [cursor=pointer]:
+                - generic [ref=e359]: 美食
+                - generic [ref=e361]: 午餐 · Max on Hardware（已预约）
+                - generic [ref=e362]: 维妈市场结束后步行前往餐厅，按实时导航安排出发，建议11:50到店；12:00午餐。餐后继续图书馆及市区漫步。
+              - generic [ref=e363]:
+                - generic [ref=e364]: Max on Hardware Melbourne
+                - generic [ref=e365]:
+                  - button "导航：Max on Hardware Melbourne" [ref=e366] [cursor=pointer]: 导航
+                  - button "标记完成：午餐 · Max on Hardware（已预约）" [ref=e369] [cursor=pointer]:
+                    - generic [ref=e370]: ○
+          - generic [ref=e371]:
+            - generic [ref=e372]:
+              - generic [ref=e373]: 待安排
+              - generic [ref=e374]: 按顺序游览
+            - generic [ref=e378]:
+              - button "查看维多利亚州立图书馆" [ref=e379] [cursor=pointer]:
+                - generic [ref=e380]: 探索
+                - generic [ref=e382]: 维多利亚州立图书馆
+                - generic [ref=e383]: 先到 6 楼看全景，再去 5 楼与 3 楼拍摄；途经 Melbourne Central。
+              - generic [ref=e384]:
+                - generic [ref=e385]: State Library Victoria
+                - generic [ref=e386]:
+                  - button "导航：State Library Victoria" [ref=e387] [cursor=pointer]: 导航
+                  - button "标记完成：维多利亚州立图书馆" [ref=e390] [cursor=pointer]:
+                    - generic [ref=e391]: ○
+          - generic [ref=e392]:
+            - generic [ref=e393]:
+              - generic [ref=e394]: 待安排
+              - generic [ref=e395]: 按顺序游览
+            - generic [ref=e399]:
+              - button "查看唐人街 → 皇家拱廊" [ref=e400] [cursor=pointer]:
+                - generic [ref=e401]: 探索
+                - generic [ref=e403]: 唐人街 → 皇家拱廊
+                - generic [ref=e404]: 路过唐人街和 ChaTraMue，皇家拱廊拍照后前往市政厅。
+              - generic [ref=e405]:
+                - generic [ref=e406]: Royal Arcade Melbourne
+                - generic [ref=e407]:
+                  - button "导航：Royal Arcade Melbourne" [ref=e408] [cursor=pointer]: 导航
+                  - button "标记完成：唐人街 → 皇家拱廊" [ref=e411] [cursor=pointer]:
+                    - generic [ref=e412]: ○
+          - generic [ref=e413]:
+            - generic [ref=e414]:
+              - generic [ref=e415]: 待安排
+              - generic [ref=e416]: 按顺序游览
+            - generic [ref=e420]:
+              - button "查看市政厅、涂鸦街与福林德车站" [ref=e421] [cursor=pointer]:
+                - generic [ref=e422]: 探索
+                - generic [ref=e424]: 市政厅、涂鸦街与福林德车站
+                - generic [ref=e425]: 经过圣保罗大教堂、Hosier Lane、联邦广场；教堂对面的长椅可拍车站。
+              - generic [ref=e426]:
+                - generic [ref=e427]: Flinders Street Station Melbourne
+                - generic [ref=e428]:
+                  - button "导航：Flinders Street Station Melbourne" [ref=e429] [cursor=pointer]: 导航
+                  - button "标记完成：市政厅、涂鸦街与福林德车站" [ref=e432] [cursor=pointer]:
+                    - generic [ref=e433]: ○
+          - generic [ref=e434]:
+            - generic [ref=e435]:
+              - generic [ref=e436]: 待安排
+              - generic [ref=e437]: 按顺序游览
+            - generic [ref=e441]:
+              - button "查看维多利亚国家美术馆" [ref=e442] [cursor=pointer]:
+                - generic [ref=e443]: 探索
+                - generic [ref=e445]: 维多利亚国家美术馆
+                - generic [ref=e446]: 原表记录 10:00–17:00，留意闭馆时间；拍摄 2 楼作品及雕塑花园。
+              - generic [ref=e447]:
+                - generic [ref=e448]: National Gallery of Victoria
+                - generic [ref=e449]:
+                  - button "导航：National Gallery of Victoria" [ref=e450] [cursor=pointer]: 导航
+                  - button "标记完成：维多利亚国家美术馆" [ref=e453] [cursor=pointer]:
+                    - generic [ref=e454]: ○
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - generic [ref=e457]: 18:45
+              - generic [ref=e458]: 计划时间
+            - generic [ref=e462]:
+              - button "查看晚餐 · Palermo" [ref=e463] [cursor=pointer]:
+                - generic [ref=e464]: 美食
+                - generic [ref=e466]: 晚餐 · Palermo
+                - generic [ref=e467]: 原表有预约编号；眼肉牛排、脆土豆、提拉米苏。取消规则在原表中有不同表述，请以确认单为准。
+              - generic [ref=e468]:
+                - generic [ref=e469]: Palermo Melbourne
+                - generic [ref=e470]:
+                  - button "导航：Palermo Melbourne" [ref=e471] [cursor=pointer]: 导航
+                  - button "标记完成：晚餐 · Palermo" [ref=e474] [cursor=pointer]:
+                    - generic [ref=e475]: ○
+          - generic [ref=e476]:
+            - generic [ref=e477]:
+              - generic [ref=e478]: 待安排
+              - generic [ref=e479]: 按顺序游览
+            - generic [ref=e483]:
+              - button "查看回酒店 · 检查后续预订" [ref=e484] [cursor=pointer]:
+                - generic [ref=e485]: 住宿
+                - generic [ref=e487]: 回酒店 · 检查后续预订
+                - generic [ref=e488]: 住宿：盛橡，9/29晚再统一整理行李，9/30转场。检查随身／托运行李额度，以各人机票为准。 Hello Auntie已确认改为9/30 17:30；如不去，须至少提前24小时取消（即9/29 17:30前，悉尼当地时间），否则扣50澳元，按用户提供规则记录。
+              - generic [ref=e489]:
+                - generic [ref=e490]: Oaks Melbourne on William Suites
+                - generic [ref=e491]:
+                  - button "导航：Oaks Melbourne on William Suites" [ref=e492] [cursor=pointer]: 导航
+                  - button "标记完成：回酒店 · 检查后续预订" [ref=e495] [cursor=pointer]:
+                    - generic [ref=e496]: ○
+          - generic [ref=e497]:
+            - generic [ref=e498]:
+              - generic [ref=e499]: 待安排
+              - generic [ref=e500]: 按顺序游览
+            - generic [ref=e504]:
+              - button "查看超市补给 · 为大洋路备早餐与水" [ref=e505] [cursor=pointer]:
+                - generic [ref=e506]: 购物
+                - generic [ref=e508]: 超市补给 · 为大洋路备早餐与水
+                - generic [ref=e509]: 次日补给（按9/28大洋路一日游推算）：这一晚是全程最不能省的一次补给。原表9/28写明「早餐：出发前在房间吃前夜准备的面包、酸奶或三明治」，且出发时间由团方9/27通知、可能很早，酒店早餐赶不上，必须今晚买好。 清单：面包／三明治＋酸奶（次日车上或房内早餐）、每人 2 瓶水（原表提醒带水，全天跟车、停留点少）、耐放小食。原表另提醒带防风衣，并记有信用卡与每人 5 澳元现金。 Coles 营业 6:00–23:00（原表），Palermo 晚餐后仍可顺路。
+              - generic [ref=e510]:
+                - generic [ref=e511]: Coles Melbourne CBD
+                - generic [ref=e512]:
+                  - button "导航：Coles Melbourne CBD" [ref=e513] [cursor=pointer]: 导航
+                  - button "标记完成：超市补给 · 为大洋路备早餐与水" [ref=e516] [cursor=pointer]:
+                    - generic [ref=e517]: ○
+      - button "下一项 · 09.25 12:30 出发前往浦东机场 T2 →" [ref=e303] [cursor=pointer]:
+        - generic [ref=e306]: 下一项 · 09.25 12:30 出发前往浦东机场 T2
+        - generic [ref=e307]: →
+      - generic [ref=e308]:
+        - generic [ref=e309]: MADE FOR YOUR LITTLE ADVENTURE
+        - generic [ref=e310]: 来自飞书计划 · 旅行当地时间 · 本地保存
+  - generic [ref=e311]:
+    - button "每日行程" [ref=e312] [cursor=pointer]
+    - button "旅途全览" [ref=e317] [cursor=pointer]
+    - button "行前清单" [ref=e321] [cursor=pointer]
+    - button "提醒核对" [ref=e325] [cursor=pointer]

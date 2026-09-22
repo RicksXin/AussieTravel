@@ -56,15 +56,23 @@
 .dish-photo-hint { font-size: 11px; font-weight: 400; color: #748173; }
 .dish-photo-card { margin-bottom: 14px; }
 .dish-photo { display: block; width: 100%; border-radius: 12px; background: #edf1e8; }
+taro-image-core.dish-photo { height: auto; }
+taro-image-core.dish-photo > img { display: block; width: 100%; height: auto; }
 .dish-photo-caption { display: block; margin-top: 7px; font-size: 11px; line-height: 1.6; color: #748173; }
 .dish-empty, .dish-photo-fallback { display: block; padding: 18px 14px; margin-top: 12px; border-radius: 12px; background: #f3f5ed; color: #748173; font-size: 12px; line-height: 1.7; }
+/* Placeholder keeps the photo's own aspect ratio: padding-bottom is set inline per photo. */
+.dish-photo-loading { position: relative; width: 100%; border-radius: 12px; background: #edf1e8; }
+.dish-photo-spinner { position: absolute; top: 50%; left: 50%; width: 22px; height: 22px; margin: -11px 0 0 -11px; border: 2px solid #d6ddcd; border-top-color: #8fa285; border-radius: 50%; animation: dish-photo-spin 0.8s linear infinite; }
+@keyframes dish-photo-spin { to { transform: rotate(360deg); } }
+
+/* The dock spans the same 430px column as the app, so on a desktop browser the button stays
+   beside the phone-width layout instead of drifting to the window edge. It ignores taps itself. */
+.back-top-dock { position: fixed; left: 0; right: 0; bottom: calc(86px + env(safe-area-inset-bottom)); max-width: 430px; margin: 0 auto; padding: 0 16px; display: flex; justify-content: flex-end; pointer-events: none; z-index: 20; }
+.back-top { pointer-events: auto; width: 46px; height: 46px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 50%; background: rgba(255, 255, 255, .96); border: 1px solid #dde4d4; box-shadow: 0 4px 14px rgba(36, 89, 77, .16); color: #24594d; }
+.back-top-arrow { font-size: 16px; line-height: 1; }
+.back-top-label { font-size: 9px; line-height: 1; letter-spacing: .5px; }
 
 .spot-guide { margin-top: 22px; padding-top: 20px; border-top: 1px solid #e4e9de; }
-.pose-grid { display: flex; flex-wrap: wrap; margin: 0 -5px; }
-.pose-card { width: 50%; padding: 0 5px 14px; box-sizing: border-box; }
-.pose-card .dish-photo-card { margin-bottom: 6px; }
-.pose-card .dish-photo-caption { color: #294d3d; font-size: 14px; font-weight: 600; }
-.pose-tip { display: block; font-size: 12px; color: #6c7969; line-height: 1.7; }
 
 .dish-recommendation { display: block; margin-top: 12px; padding: 12px 14px; background: #f3f5ed; border-radius: 12px; font-size: 13px; line-height: 1.8; color: #526457; }
 .photo-source{display:block;margin-top:6px;font-size:11px;line-height:1.6;color:#688273;overflow-wrap:anywhere}

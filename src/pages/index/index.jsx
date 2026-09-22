@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react'
-import Taro, { useDidShow, useDidHide } from '@tarojs/taro'
+import Taro, { useDidShow, useDidHide, usePageScroll } from '@tarojs/taro'
 import { View, Text, Image, ScrollView, Input, Switch } from '@tarojs/components'
 import { days as originalDays, issues } from '../../data'
 import source from '../../../data/trip-notes.json'
@@ -7,7 +7,8 @@ import { localDay, nextEvent, eventInstant } from '../../logic'
 import { readStored, store, openSource, navigateToPlace, exportCalendar, headerLayout } from '../../services'
 import { locationLabel } from '../../places'
 import { restaurantFor } from '../../restaurant-dishes'
-import { spotGuideFor, poses } from '../../spot-guides'
+import { spotGuideFor } from '../../spot-guides'
+import { mediaSrc, previewSrcList, cacheMedia, subscribeMedia, mediaRatio } from '../../media'
 import icons from '../../assets/icons'
 import coast from '../../assets/coast.png'
 
@@ -17,10 +18,38 @@ const tabs=[['timeline','calendar','每日行程'],['route','route','旅途全�
 const Icon=({name,className=''})=><Image className={`icon ${className}`} src={icons[name]||icons.spot} mode='aspectFit'/>
 const Button=({children,className='',...props})=><View {...props} className={`ui-button ${className}`} ariaRole='button' tabIndex={0} onKeyDown={event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();props.onClick?.(event)}}}>{children}</View>
 
+// Re-renders once a cloud photo has been saved locally, so the saved copy replaces the remote URL.
+function useMedia(src) {
+  const [,bump]=useState(0)
+  useEffect(()=>{cacheMedia(src);return subscribeMedia(()=>bump(n=>n+1))},[src])
+  return mediaSrc(src)
+}
+
+// Saving the group can take a moment on a slow connection, so keep the tap acknowledged.
+async function openPreview(photo,photos){
+  Taro.showLoading({title:'打开图片',mask:true})
+  try{
+    const urls=await previewSrcList(photos)
+    const current=(await previewSrcList([photo]))[0]
+    Taro.hideLoading()
+    if(!urls.length||!current) return Taro.showToast({title:'图片还没下载完，请稍后再试',icon:'none'})
+    await Taro.previewImage({current,urls})
+  }catch{
+    Taro.hideLoading()
+    Taro.showToast({title:'暂时无法预览图片',icon:'none'})
+  }
+}
+
 function DetailPhoto({photo,photos}) {
   const [failed,setFailed]=useState(false)
+  const src=useMedia(photo.src)
+  // Reserve the photo's own shape while it downloads, so opening a panel does not shift the layout.
+  if(!src) return <View className='dish-photo-card'>
+    <View className='dish-photo-loading' style={{paddingBottom:`${mediaRatio(photo.src)}%`}}><View className='dish-photo-spinner'/></View>
+    <Text className='dish-photo-caption'>{photo.caption}</Text>
+  </View>
   return <View className='dish-photo-card'>
-    {failed?<View className='dish-photo-fallback' onClick={()=>setFailed(false)} ariaRole='button'>图片加载失败，点击重试</View>:<Image className='dish-photo' src={photo.src} mode='widthFix' lazyLoad onError={()=>setFailed(true)} onClick={()=>Taro.previewImage({current:photo.src,urls:photos.map(p=>p.src)}).catch(()=>Taro.showToast({title:'暂时无法预览图片',icon:'none'}))} ariaLabel={`放大查看${photo.caption}`}/>}
+    {failed?<View className='dish-photo-fallback' onClick={()=>setFailed(false)} ariaRole='button'>图片加载失败，点击重试</View>:<Image className='dish-photo' src={src} mode='widthFix' lazyLoad onError={()=>setFailed(true)} onClick={()=>openPreview(photo,photos)} ariaLabel={`放大查看${photo.caption}`}/>}
     <Text className='dish-photo-caption'>{photo.caption}</Text>
     {photo.author&&<Text className='photo-source' onClick={()=>Taro.setClipboardData({data:photo.sourceUrl}).catch(()=>Taro.showToast({title:'暂时无法复制来源',icon:'none'}))}>小红书 · {photo.author} · 复制来源 ↗</Text>}
   </View>
@@ -37,7 +66,11 @@ export default function Index() {
   const [now,setNow]=useState(Date.now()),[foreground,setForeground]=useState(true)
   const [reminders,setReminders]=useState(()=>readStored('aussie-reminders',false))
   const [modal,setModal]=useState(null)
+  const [dayScroll,setDayScroll]=useState(0)
+  const [showTop,setShowTop]=useState(false)
   const sent=useRef(new Set())
+  // Read inside the scroll handler so it never sees a stale threshold.
+  const topAfter=useRef(Infinity)
   const days=useMemo(()=>originalDays.map(d=>({...d,events:d.events.map(e=>Object.prototype.hasOwnProperty.call(times,e.id)?{...e,time:times[e.id],edited:true}:e)})),[times])
   const day=days[active],upcoming=nextEvent(days,new Date(now),done)
   const completeCount=day.events.filter(e=>done[e.id]).length
@@ -48,7 +81,34 @@ export default function Index() {
   useDidShow(()=>{setForeground(true);setNow(Date.now())})
   useDidHide(()=>setForeground(false))
   useEffect(()=>{const id=setInterval(()=>setNow(Date.now()),30000);return()=>clearInterval(id)},[])
-  useEffect(()=>{Taro.pageScrollTo({scrollTop:0,duration:0}).catch(()=>{})},[tab])
+  useEffect(()=>{Taro.pageScrollTo({scrollTop:0,duration:0}).catch(()=>{});setShowTop(false)},[tab])
+  // Centre the chosen date instead of letting it snap to the left edge, so the days either side
+  // stay visible. Measured rather than derived from CSS, which differs between the two builds.
+  useEffect(()=>{
+    const probe=Taro.createSelectorQuery()
+    probe.select('.day-scroll').boundingClientRect()
+    probe.select('.day-scroll').scrollOffset()
+    probe.select(`#day-${active}`).boundingClientRect()
+    probe.exec(([box,offset,item])=>{
+      if(!box?.width||!item?.width||!offset)return
+      setDayScroll(Math.max(0,offset.scrollLeft+(item.left-box.left)-(box.width-item.width)/2))
+    })
+  },[active,tab])
+  // The button appears halfway down the scrollable distance, and only when the page is long
+  // enough to be worth a shortcut. Measured after the content settles rather than on every scroll.
+  useEffect(()=>{
+    const timer=setTimeout(()=>{
+      const probe=Taro.createSelectorQuery()
+      probe.select('.app-shell').boundingClientRect()
+      probe.exec(([box])=>{
+        const view=Taro.getWindowInfo?.().windowHeight||0
+        const scrollable=(box?.height||0)-view
+        topAfter.current=view&&scrollable>view*0.6?scrollable/2:Infinity
+      })
+    },150)
+    return()=>clearTimeout(timer)
+  },[tab,active,filter,query])
+  usePageScroll(({scrollTop})=>setShowTop(scrollTop>topAfter.current))
   useEffect(()=>{
     if(!reminders||!foreground)return
     const due=days.flatMap(d=>d.events.map(e=>({d,e,at:eventInstant(d,e)}))).find(({e,at})=>at&&!e.optional&&!e.tentative&&!done[e.id]&&!sent.current.has(e.id)&&+at>=now&&+at-now<=30*60000)
@@ -94,13 +154,14 @@ export default function Index() {
         </View>
         <View className='header-summary'><View><Text className='header-title'>{tab==='timeline'?day.city:tabs.find(t=>t[0]===tab)[2]}</Text><Text className='header-caption'>9.25 — 10.03 · 澳大利亚</Text></View></View>
         {tab==='timeline'&&<>
-<ScrollView scrollX className='day-scroll' enhanced showScrollbar={false} scrollIntoView={`day-${active}`} scrollWithAnimation><View className='day-strip'>{days.map((d,i)=><View key={d.date} id={`day-${i}`} onClick={()=>chooseDay(i)} className={`day ${i===active?'active':''}`} ariaRole='button' ariaLabel={`${d.date} ${d.city}`}><Text className='day-date'>{d.date.slice(5).replace('-','.')}</Text><Text className='day-city'>{dayNames[i]}</Text></View>)}</View></ScrollView>
+<ScrollView scrollX className='day-scroll' enhanced showScrollbar={false} scrollLeft={dayScroll} scrollWithAnimation><View className='day-strip'>{days.map((d,i)=><View key={d.date} id={`day-${i}`} onClick={()=>chooseDay(i)} className={`day ${i===active?'active':''}`} ariaRole='button' ariaLabel={`${d.date} ${d.city}`}><Text className='day-date'>{d.date.slice(5).replace('-','.')}</Text><Text className='day-city'>{dayNames[i]}</Text></View>)}</View></ScrollView>
         </>}
       </View>
       <View className='page'>
       {tab==='timeline'?renderTimeline():tab==='route'?renderRoute():tab==='packing'?renderPacking():renderReminders()}
       <View className='footer'><Text>MADE FOR YOUR LITTLE ADVENTURE</Text><Text>来自飞书计划 · 旅行当地时间 · 本地保存</Text></View>
     </View></View>
+    {showTop&&!modal&&<View className='back-top-dock'><Button className='back-top' ariaLabel='回到页面顶部' onClick={()=>{Taro.pageScrollTo({scrollTop:0,duration:260}).catch(()=>{});setShowTop(false)}}><Text className='back-top-arrow'>↑</Text><Text className='back-top-label'>顶部</Text></Button></View>}
     <View className='bottom-nav'>{tabs.map(([id,i,l])=><Button key={id} className={`bottom-tab ${tab===id?'selected':''}`} onClick={()=>setTab(id)}><Icon name={i}/><Text>{l}</Text>{tab===id&&<View className='active-indicator'/>}</Button>)}</View>
     {modal&&<View className='modal-mask' onClick={()=>setModal(null)}><View className='modal-panel' onClick={e=>e.stopPropagation()}><Button className='close-modal' ariaLabel='关闭详情' onClick={()=>setModal(null)}>×</Button><ScrollView scrollY className='modal-scroll'><View className='modal-content'>
       {modal.type==='catalog'?<><Text className='eyebrow'>PLACES TO EXPLORE</Text><Text className='modal-title'>景点备选库</Text><Text className='modal-intro'>同步自飞书 Sheet1；标记偏好不代表已安排进当天行程。</Text>{source.attractions.map(a=><View className='original-note' key={a.row}><Text className='row-number'>{a.city}{a.preferred?' · 原表偏好':''}</Text><Text className='original-title'>{a.title}</Text><Text className='original-text'>{[a.description,a.note].filter(Boolean).join('\n')}</Text></View>)}<Button className='text-button' onClick={()=>openSource(null,'71e069')}>复制景点库原表链接 ↗</Button></>:modal.type==='notes'?<><Text className='eyebrow'>THE ORIGINAL NOTES</Text><Text className='modal-title'>{day.date.slice(5).replace('-','.')} · 原计划随身看</Text><Text className='modal-intro'>原文包含执行安排、旧备选和草案，请以各段说明为准。9/30旧购物路线与10/2旧Coogee–Watsons长线不加入当前行程。</Text>{noteRows.length?noteRows.map(r=><View className='original-note' key={r.row}><Text className='row-number'>原表第 {r.row} 行</Text><Text className='original-title'>{r.cells.slice(0,3).filter(Boolean).join(' · ')||'补充备注'}</Text><Text className='original-text'>{r.cells.slice(3,5).filter(Boolean).join('\n')}</Text></View>):<Text className='modal-intro'>详细表中没有当天安排，请核对汇总表及航班确认单。</Text>}<Button className='text-button' onClick={()=>openSource(null,day.range?'BWm0nP':'wqGvS6')}>复制飞书原表链接 ↗</Button></>:<><Text className='eyebrow'>{selectedDay.date} · {selectedEvent.city||selectedDay.city}当地时间</Text><Text className='modal-title'>{selectedEvent.title}</Text><Text className={`type ${selectedEvent.type}`}>{labels[selectedEvent.type]}</Text>{selectedEvent.type==='food'&&<View className='restaurant-section'>
@@ -118,7 +179,6 @@ export default function Index() {
         <View className='dish-list'>{spotGuide.locations.map((location,i)=><View className='dish-row' key={location}><Text className='dish-index'>{String(i+1).padStart(2,'0')}</Text><Text className='dish-name'>{location}</Text></View>)}</View>
         {spotGuide.photos.length>0&&<><Text className='dish-photo-heading'>实景参考<Text className='dish-photo-hint'>点击放大</Text></Text>{spotGuide.photos.map(photo=><DetailPhoto key={photo.src} photo={photo} photos={spotGuide.photos}/>)}</>}
         {spotGuide.posePhotos?.length>0&&<><Text className='dish-photo-heading'>姿势推荐图<Text className='dish-photo-hint'>实拍参考 · 点击放大</Text></Text>{spotGuide.posePhotos.map(photo=><DetailPhoto key={photo.src} photo={photo} photos={spotGuide.posePhotos}/>)}</>}
-        {spotGuide.poseIds.length>0&&<><Text className='dish-photo-heading'>姿势推荐图<Text className='dish-photo-hint'>动作示意 · 非实景</Text></Text><View className='pose-grid'>{spotGuide.poseIds.map(id=><View className='pose-card' key={id}><DetailPhoto photo={{src:poses[id].src,caption:poses[id].title}} photos={spotGuide.poseIds.map(key=>({src:poses[key].src}))}/><Text className='pose-tip'>{poses[id].tip}</Text></View>)}</View></>}
       </View>}<Text className='modal-intro'>{restaurant?.itineraryNote||selectedEvent.note}</Text></>}
     </View></ScrollView></View></View>}
   </View>

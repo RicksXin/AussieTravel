@@ -19,8 +19,20 @@ export const restaurants = {
     sourceRows: [149]
   },
   'Apollo Bay Victoria': {
-    dishes: ["Fishermen’s Co-operative · 海鲜拼盘（单人／双人）", 'Seafood Café · 混合海鲜意面 Marinara Linguine', 'Dooley’s · 巧克力／百香果／莓果冰淇淋'],
-    sourceRows: [178,179,180]
+    dishes: ["Fishermen’s Co-operative · 海鲜拼盘 单人 35 / 双人 65 AUD · 炸鱿鱼、炸鳕鱼、煎扇贝、薯条与沙拉（原表标注偏油炸）", 'Seafood Café · 混合海鲜意面 Marinara Linguine 25 AUD · 2 扇贝、2 大虾仁、4 青口，番茄底，原表强推', "George’s · 牛肉汉堡与炸鱼薯条 共约 30 AUD（原表标注偏油炸）", 'Dooley’s · 巧克力／百香果／莓果冰淇淋 6.9 AUD 单球 / 10.5 AUD 双球 · 店员推荐口味'],
+    sourceRows: [178,179,180,181]
+  },
+  // 原表第 68、71 行：三家备选按当日位置、排队与营业情况现场选择，均未预约。
+  // 企鹅场次尚未约到；约到后晚餐再围绕场次安排。原 Max 19:00 晚餐已取消，改为 9/27 午餐。
+  'St Kilda Beach Melbourne': {
+    dishes: ['Republica St Kilda Beach · 海滩边餐吧', "McDonald’s · 就近快餐，排队与时间最省", 'Donovans · 海滩正餐，想坐下吃再考虑'],
+    sourceLabel: '原表 St Kilda 晚餐备选 · 三家都未预约，当天现场决定',
+    sourceRows: [68,71]
+  },
+  // 9/28 返城后原表注明「自行解决、不固定餐厅、不赶预约」；这两家只是原表记录的备选，不构成安排。
+  'Melbourne CBD': {
+    dishes: ['BBQ King · 韩式自助烤肉 · 午市 39.9 / 晚市 49.9 AUD，现金再 5% off · 12:00–16:00、16:30–01:00，酒店附近', 'Chickorea · 韩式炸鸡 Cheese Bling／Cream Onion（原表标注后者更好）· 半份 26 / 整份 42 AUD · 17:00–22:00，维妈附近'],
+    sourceRows: [190,192]
   },
   'Hello Auntie Darling Square': {
     dishes: ['生牛肉塔塔 · Beef Tartare', '越南春卷组合 · Rice Paper Roll Kit', '鸭肉意面 · Epic Duck Ragu', '越南咖啡甜点 · Viet Coffee Trifle'],
@@ -44,5 +56,5 @@ export function restaurantFor(event) {
   const base = restaurants[event.place]
   const extra = researchByPlace[event.place]
   if (!base && !extra) return null
-  return {...base, photos:extra?.photos||base?.photos||[], additionalDishes:extra?.additionalDishes||[]}
+  return {...base, photos:extra?.photos||base?.photos||[], additionalDishes:extra?.additionalDishes||[], recommendationNote:extra?.recommendationNote||base?.recommendationNote}
 }

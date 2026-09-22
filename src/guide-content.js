@@ -199,7 +199,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Palermo Melbourne": {
     "photos": [
@@ -212,7 +213,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Rockpool Bar & Grill Sydney": {
     "photos": [
@@ -229,7 +231,8 @@ export const researchByPlace = {
       "XO 酱烤扇贝",
       "烤虾",
       "Rump / Skirt 牛排"
-    ]
+    ],
+    "recommendationNote": ""
   },
   "Apollo Bay Victoria": {
     "photos": [
@@ -244,7 +247,8 @@ export const researchByPlace = {
     "suggestion": "",
     "additionalDishes": [
       "Seafood Cafe · 海鲜拼盘、虾仁意面"
-    ]
+    ],
+    "recommendationNote": ""
   },
   "Kiama NSW": {
     "photos": [
@@ -261,7 +265,8 @@ export const researchByPlace = {
       "The Hungry Monkey · 肉酱薯条",
       "The Hungry Monkey · Bad Boy 汉堡",
       "The Hungry Monkey · Acai bowl"
-    ]
+    ],
+    "recommendationNote": ""
   },
   "Kiama Blowhole": {
     "photos": [
@@ -274,7 +279,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "在开放草地以灯塔为背景，人物放在塔旁，留出天空。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Gerringong Whale Watching Platform": {
     "photos": [
@@ -287,7 +293,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "从人行道利用起伏街道和海湾构图，人物侧身走动。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Minnamurra Lookout": {
     "photos": [
@@ -300,7 +307,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "从观景草地拍河口、沙洲与天空，人物背影放在画面边侧。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Bald Hill Lookout": {
     "photos": [
@@ -313,7 +321,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "从开放观景台拍摄海岸曲线，前景保留少量草地，人物侧身看海。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Sydney Opera House": {
     "photos": [
@@ -326,7 +335,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "侧坐在长椅上，肩膀放松，头微侧向光；用椅背曲线引向歌剧院。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Royal Botanic Garden Sydney": {
     "photos": [
@@ -339,7 +349,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "站在滨水步道护栏内，身体微侧、双手自然放口袋，视线望向一旁，留出歌剧院和海港大桥。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Bondi Beach Sydney": {
     "photos": [
@@ -352,7 +363,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "站在栏杆内侧，身体微侧，抬手轻扶头发或自然垂手；树木作为两边框景，海滩曲线完整留在背景。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "St Mary's Cathedral Sydney": {
     "photos": [
@@ -365,7 +377,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "在教堂旁长椅自然侧坐，双手放腿上，人物置于画面一侧，保留尖塔轮廓。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Art Gallery of New South Wales": {
     "photos": [
@@ -378,7 +391,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "在允许拍摄的展厅，侧身看画或在座椅上自然侧坐；人物与画框错开，保留画框完整边缘。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Gertrude Street Fitzroy Melbourne": {
     "photos": [
@@ -391,7 +405,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "在人行道上以复古店面为背景，侧身回头或轻扶头发；相机略低于眼睛，保留街道纵深。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Queen Victoria Market Melbourne": {
     "photos": [
@@ -404,7 +419,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "站在橱窗侧边，手持咖啡、身体微侧、视线看向店铺；以面包陈列和窗框作背景。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Royal Arcade Melbourne": {
     "photos": [
@@ -417,7 +433,8 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "楼梯侧面站定，身体朝前、头轻轻回看镜头；从略高位置取景，让栏杆形成对角线。按店铺开放范围拍摄。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
   },
   "Monash University Caulfield Campus": {
     "photos": [
@@ -430,6 +447,67 @@ export const researchByPlace = {
       }
     ],
     "suggestion": "图书馆若开放可抬头拍天井的对称线条；户外回访合影可选公共休息区，在建筑线条旁自然站立。",
-    "additionalDishes": []
+    "additionalDishes": [],
+    "recommendationNote": ""
+  },
+  "Bendeela Recreation Area": {
+    "photos": [
+      {
+        "src": "/guide-media/xhs-bendeela-wombat.jpg",
+        "caption": "Bendeela 草地上的袋熊 · 观察参考",
+        "kind": "landscape",
+        "author": "RandallZxx",
+        "sourceUrl": "https://www.xiaohongshu.com/explore/6a995dd5000000002900d72c"
+      }
+    ],
+    "suggestion": "从开放区域用长焦或手机变焦记录袋熊与草地，保留动物周围空间；不追逐、触摸或靠近合影。",
+    "additionalDishes": [],
+    "recommendationNote": ""
+  },
+  "Great Ocean Road Memorial Arch": {
+    "photos": [
+      {
+        "src": "/guide-media/xhs-memorial-arch-pose.jpg",
+        "caption": "纪念拱门旁举手合影 · 路旁停留区",
+        "kind": "pose",
+        "author": "萌二biuのmax",
+        "sourceUrl": "https://www.xiaohongshu.com/explore/69dc800a000000001d019716"
+      }
+    ],
+    "suggestion": "站在路旁停留区的栏杆内，身体略侧、抬一只手作托住门牌的动作；镜头稍向上，完整保留 GREAT OCEAN ROAD 字样。",
+    "additionalDishes": [],
+    "recommendationNote": ""
+  },
+  "Melbourne CBD": {
+    "photos": [
+      {
+        "src": "/guide-media/xhs-chickorea-chicken.jpg",
+        "caption": "Chickorea · 无骨炸鸡与 Cream Onion 酱（口味评价有分歧）",
+        "kind": "dish",
+        "author": "肥咪日记",
+        "sourceUrl": "https://www.xiaohongshu.com/explore/6a2d195b000000003502d19e"
+      }
+    ],
+    "suggestion": "",
+    "additionalDishes": [
+      "Chickorea · Boneless Chicken 无骨炸鸡"
+    ],
+    "recommendationNote": "Chickorea：食客推荐无骨炸鸡的酥脆口感；Cream Onion 酱评价有分歧，这篇食记觉得后味偏苦，原攻略则更喜欢它，可按口味选酱。"
+  },
+  "St Kilda Beach Melbourne": {
+    "photos": [
+      {
+        "src": "/guide-media/xhs-donovans-liver.jpg",
+        "caption": "Donovans · Chicken Liver 鸡肝酱配面包",
+        "kind": "dish",
+        "author": "Evelyn-2026版🎀",
+        "sourceUrl": "https://www.xiaohongshu.com/explore/67fcaf99000000001a00734b"
+      }
+    ],
+    "suggestion": "",
+    "additionalDishes": [
+      "Donovans · Chicken Liver 鸡肝酱配面包"
+    ],
+    "recommendationNote": "Donovans：食客推荐鸡肝酱涂面包吃，整体口味偏淡。来自 2025 年探店，供晚餐备选时参考。"
   }
 }
