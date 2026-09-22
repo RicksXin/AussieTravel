@@ -94,3 +94,41 @@
 - 机位数据相应调整：那两个机位实际站位都在教堂这侧、拍的是车站，因此移到 `St Paul's Cathedral Melbourne` 名下；福林德车站改为自身立面机位并指向下一项。原事项 ID、标题与已关联的 2 张用户参考图保持不变。
 - 开放时间与礼拜安排未核实，备注已注明以现场公告为准。
 - `npm test` 11/11 通过；微信与 H5 构建通过，主包 704 KB。H5 实测 9/27 共 10 项、顺序正确，教堂详情显示 3 条机位且导航指向 St Paul's Cathedral Melbourne。
+
+## 2026-09-22 · 9/29 新增 Jasper Coffee 买咖啡豆
+
+- 用户补充：9/29 Fitzroy 可以去买咖啡豆做伴手礼。用户写作「Josper」，实际店名为 **Jasper Coffee**（1989 年创立的墨尔本烘焙商）；已核实地址 267 Brunswick St, Fitzroy VIC 3065，正落在原表第 202/204 行记录的 Brunswick St 漫游路线上，无需额外绕路。来源：jaspercoffee.com、MapQuest 商户页。
+- 新增 `2026-09-29-jasper-coffee`（type shop，row 204，紧随 Fitzroy 漫游），备注明确标注「你补充的安排，飞书原表没有这一项」。营业时间与价格未核实。
+- 关联原表信息：第 93 行在维妈市场（9/27）记过「咖啡豆是最佳的伴手礼之一」（Market Lane，约 26 澳元），备注提示若 9/27 已买可在此只挑不同产地。
+- 修正自相矛盾：9/29 补给项原写「墨尔本这边别再买占重量的东西」，与本项冲突，改为咖啡豆当晚一起装箱、通用伴手礼（奶粉、保健品）仍留到悉尼 Coles World Square。
+- 9/29 事项数由 8 增至 9，同步更新 `days[4].events.length` 断言。
+- `npm test` 11/11 通过；微信与 H5 构建通过，主包 708 KB。H5 实测 9/29 共 9 项、顺序正确，详情类型标签为「购物」，末项仍为超市补给。
+
+## 2026-09-22 · 9/27 维妈市场加买咖啡豆
+
+- 用户补充 McIVER'S 与 Market Lane 两家咖啡豆店。核实两家都在维妈市场内（9/27 第一项），不在 Fitzroy：McIver's Coffee & Tea 在乳制品区 Dairy Hall 101/102 摊位（来源：mcivers.melbourne 及商户页）；Market Lane 原表第 93 行已记，乳制品区／蔬果 A 区、青口贝餐车旁，澳白 6 澳元、咖啡豆约 26 澳元。
+- 新增 `2026-09-27-coffee-beans`（type shop，row 93，紧随维妈市场），把两家写在同一项里，标明 McIver's 为用户补充、Market Lane 引自原表。
+- 已用 Python 核对 2026-09-27 为周日，原表第 88 行「周天 9:00–16:00」成立：当天下午在别处 city walk，无法回头补买，备注提示上午一次买齐。维妈市场事项备注同步补入营业时间与「别买门口拉客的溢价水果」。
+- 三家咖啡店互相交叉引用：9/29 Jasper Coffee 备注改为说明它是最后一站、9/27 已买够可跳过。
+- 提示咖啡豆可先放回酒店（9/26 起连住盛橡 4 晚），不必一路带着走。营业时间与价格未核实。
+- `npm test` 11/11 通过；微信与 H5 构建通过，主包 708 KB。H5 实测 9/27 共 11 项、顺序正确，末项仍为超市补给。
+
+## 2026-09-22 · 补入超市款 Campos Colombia 咖啡豆
+
+- 用户补充 Coles／Woolworths 常见的 Campos Colombia。原表搜索确认无 Campos／Colombia 记录，属新增信息，未核实价格与在售情况。
+- 与前三家精品店性质不同（超市随时可补），因此不单独成项，挂在已有的购物事项上：9/29 墨尔本最后一次 Coles、10/01 悉尼 Coles World Square 伴手礼主场。
+- 9/27 咖啡豆项补一句分工说明：McIver's 与 Market Lane 是市场内精品店、只有那里买得到；Campos 超市随时能补，不必占用市场时间（市场周日 16:00 关门）。
+- 咖啡豆相关提示现覆盖 6 个事项并互相引用，避免重复采购。
+- `npm test` 11/11 通过；微信与 H5 构建通过。
+
+## 2026-09-22 · 七项伴手礼归位
+
+- 用户列出 7 项：Aesop、lululemon、UGG、墨尔本大学纪念品、Lucas 木瓜膏、Essensorie 护手霜、Swisse。原表已有前三项与后两项的记录，墨尔本大学纪念品与 Essensorie 为新增信息。
+- 10/01 QVB 购物项补全原表第 339–348 行内容：Aesop（Pitt St 店、4 项购买推荐、满 300 退税须开 invoice）、Lululemon（三家店对比、5 件单品价、共用 ABN 可合并退税、小票须为原始 invoice 非 reprint）、UGG（St Martins Tower 旁 the ugg shop、绿色三角标、与美国 UGG 不同、DFO Homebush 太远不去）。此前 UGG 未出现在任何事项中。
+- 木瓜膏补品牌名 Lucas' Papaw Ointment（原表写 real pawpaw）；与 Swisse、Blackmores 同在 10/01 Coles World Square 项。
+- Essensorie 已核实为墨尔本本地香氛品牌，282-284 Collins Street Shop 3（来源 essensorie.com、MapQuest），位于 9/27 皇家拱廊走向市政厅的 Collins St 路段，写入该事项备注；周日营业时间未核实，注明关门可改 9/29。
+- **修正用户设想**：墨尔本大学纪念品店官网标明周一至周五 10:00–17:00（来源 shop.unimelb.edu.au），9/27 为周日会关门。已核对 9/28 全天大洋路、9/30 十点退房赶航班，因此改放 9/29（周二）并标记 optional + flexible，备注说明改期原因与 Fitzroy 至 Parkville 的交通。
+- 已用 Python 核对：9/27 周日、10/01 周四、10/02 周五、10/03 周六。原表多家店标注的「周六休息」对应返程日 10/03，含义是当天买不了东西而非店铺周六停业；10/01 购物与 10/02 备选购物日均可正常营业。该结论写入 10/01 伴手礼项，提示所有采购最晚 10/02 完成。
+- 9/29 事项数由 9 增至 10，同步更新 `days[4].events.length` 断言。
+- `npm test` 11/11 通过；微信与 H5 构建通过，主包 716 KB。H5 实测 QVB 与墨尔本大学两项详情内容正确。
+- 未核实：Essensorie 周日营业时间、各店当前价格与库存、UGG 与 lululemon 具体门店营业时间。

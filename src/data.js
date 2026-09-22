@@ -186,9 +186,18 @@ export const days = [
         "title": "维多利亚女王市场",
         "type": "spot",
         "place": "Queen Victoria Market Melbourne",
-        "note": "步行约 850 米，途经 Flagstaff Gardens。青口贝、澳白、果酱甜甜圈、德国热狗按喜好选择。",
+        "note": "步行约 850 米，途经 Flagstaff Gardens。青口贝、澳白、果酱甜甜圈、德国热狗按喜好选择。\n原表提醒：别买门口拉客的溢价水果。9/27 是周日，原表记营业 9:00–16:00 —— 下午不能再回来补买，咖啡豆见下一项。",
         "row": 88,
         "id": "2026-09-27-0"
+      },
+      {
+        "time": null,
+        "title": "买咖啡豆 · McIver's 与 Market Lane",
+        "type": "shop",
+        "place": "Queen Victoria Market Melbourne",
+        "note": "两家都在维妈市场内，顺路一次逛完：\n【1】McIver's Coffee & Tea — 乳制品区 Dairy Hall 101/102 号摊位，墨尔本本地烘焙与调配，咖啡与茶都有。（你补充的店，飞书原表没记。）\n【2】Market Lane Coffee — 原表第 93 行：乳制品区／蔬果 A 区，在青口贝餐车旁边；澳白 6 澳元，咖啡豆约 26 澳元一包，原表写「咖啡豆是最佳的伴手礼之一」。\n这两家是精品店、只有这里买得到；超市那款 Campos Colombia 随时能补（见每晚超市补给），不必占用市场时间。\n市场周日 16:00 关门（原表），当天下午在别处 city walk，不能回头补买 —— 想买就在上午一次买齐。\n买整豆还是磨粉按收礼的人有没有磨豆机决定；整豆保鲜更久。9/29 Fitzroy 的 Jasper Coffee 是另一个选择，想凑不同产地可以分开买。\n这天起连住盛橡 4 晚，买完可先放回房间，不用一路带着走。营业时间与价格未核实，以到店为准。",
+        "row": 93,
+        "id": "2026-09-27-coffee-beans"
       },
       {
         "id": "2026-09-27-max-lunch",
@@ -213,7 +222,7 @@ export const days = [
         "title": "唐人街 → 皇家拱廊",
         "type": "spot",
         "place": "Royal Arcade Melbourne",
-        "note": "路过唐人街和 ChaTraMue，皇家拱廊拍照后前往市政厅。",
+        "note": "路过唐人街和 ChaTraMue，皇家拱廊拍照后前往市政厅。\n接着沿 Collins St 走向市政厅，路上是 Essensorie（282-284 Collins St Shop 3）—— 你列的护手霜那家，墨尔本本地香氛品牌，也做扩香与精油。9/27 周日的营业时间未核实，关门就改到 9/29 自由日再来。（飞书原表没有这家店。）",
         "row": 120,
         "id": "2026-09-27-2"
       },
@@ -428,8 +437,29 @@ export const days = [
         "row": 204,
         "time": null,
         "place": "Gertrude Street Fitzroy Melbourne",
-        "note": "Brunswick St／Gertrude St独立小店、咖啡、拍照与brunch随意安排，不固定午餐时段。",
+        "note": "Brunswick St／Gertrude St独立小店、咖啡、拍照与brunch随意安排，不固定午餐时段。\n漫游路上可顺路去 Jasper Coffee 买咖啡豆（下一项）。",
         "flexible": true
+      },
+      {
+        "id": "2026-09-29-jasper-coffee",
+        "title": "Jasper Coffee · 买咖啡豆带回",
+        "type": "shop",
+        "row": 204,
+        "time": null,
+        "place": "Jasper Coffee Fitzroy Melbourne",
+        "note": "你补充的安排，飞书原表没有这一项。地址 267 Brunswick St, Fitzroy，就在当天漫游的 Brunswick St 路线上，不用额外绕路。1989 年创立的墨尔本烘焙商，主打单一产地、有机与公平贸易豆。\n三家候选里最后的一站：9/27 维妈市场有 McIver's 与 Market Lane（市场周日 16:00 关门，过时就只剩这里）。如果 9/27 已经买够，这里可以只挑不同产地的，或者直接跳过。\n买整豆还是磨粉按收礼的人有没有磨豆机决定；整豆保鲜更久。营业时间与当前价格未核实，以到店为准。\n重量计入托运：9/30 飞悉尼每人 25kg，几包豆子无妨，但别在这里顺手买其他重物。",
+        "flexible": true
+      },
+      {
+        "id": "2026-09-29-unimelb-shop",
+        "title": "墨尔本大学纪念品 · 若想去要今天",
+        "type": "shop",
+        "row": 204,
+        "time": null,
+        "place": "University of Melbourne Merchandise Shop",
+        "note": "你说 9/27 city walk 时看看，但官网写纪念品店只在周一至周五 10:00–17:00 营业，9/27 是周日会关门 —— 所以放在 9/29（周二），这也是墨尔本唯一还能去的一天（9/28 整天在大洋路，9/30 十点退房赶飞机）。\n店在 Parkville 校区 1888 Building，另有访客中心与商店在 Gate 10；卖官方服饰、配件与礼品。\n从 Fitzroy 过来约 2 公里，11 路电车回 CBD 后换 Swanston St 北向电车；也可直接打车。之后再去 Caulfield 校区。\n只是候选：这天是自由日，Fitzroy、Monash 母校与老友聚餐都不定时间，体力和兴趣不够就跳过。营业时间以官网当日为准，来源 shop.unimelb.edu.au。（飞书原表没有这一项。）",
+        "flexible": true,
+        "optional": true
       },
       {
         "id": "2026-09-29-monash-transit",
@@ -478,7 +508,7 @@ export const days = [
         "row": 214,
         "time": null,
         "place": "Coles Melbourne CBD",
-        "note": "次日补给（按9/30转场悉尼推算）：9/30 十点前退房、早午餐合并在 café 吃，13:55 JQ516 飞悉尼，16:45 到 Song Hotel 放下行李就去 17:30 Hello Auntie，再赶 19:30 歌剧院，散场已经很晚。\n这一晚只补路上的水和轻便小食，登机前喝完或带空瓶。托运每人 25kg（原表用户确认），墨尔本这边别再买占重量的东西 —— 伴手礼留到悉尼 Coles World Square 一次买齐。\n今晚已在整理行李，买完顺手装箱。",
+        "note": "次日补给（按9/30转场悉尼推算）：9/30 十点前退房、早午餐合并在 café 吃，13:55 JQ516 飞悉尼，16:45 到 Song Hotel 放下行李就去 17:30 Hello Auntie，再赶 19:30 歌剧院，散场已经很晚。\n这一晚只补路上的水和轻便小食，登机前喝完或带空瓶。托运每人 25kg（原表用户确认）；白天在 Jasper Coffee 买的咖啡豆今晚一起装箱，超市这边就不必再添占重量的东西 —— 通用伴手礼（奶粉、保健品等）留到悉尼 Coles World Square 一次买齐。\n顺手可看 Campos Colombia 咖啡豆：Coles 与 Woolworths 常有，价格低于精品店，适合送人多备几包。悉尼的 Coles 同样有，不急着在墨尔本买。\n今晚已在整理行李，买完顺手装箱。",
         "flexible": true
       }
     ],
@@ -733,7 +763,7 @@ export const days = [
         "title": "返回悉尼 · QVB 购物",
         "type": "shop",
         "place": "Queen Victoria Building Sydney",
-        "note": "包车时刻为参考，司机与接车细节9/30通知。原计划 16:30 回到 QVB，附近 Aesop、Lululemon 等按需要购买；购物清单见原备注。",
+        "note": "包车时刻为参考，司机与接车细节9/30通知。原计划 16:30 回到 QVB。QVB 本身营业 11:00–17:00，2–3 楼连廊是原表标的拍照机位，打烊后仍可进去拍（人少）。\n【Aesop 伊索】原表推荐 QVB 附近 Pitt St 店，10:00–19:00。澳洲价格比港澳和官网便宜，悉尼机场没有 Aesop，所以别留到最后。原表购买推荐：b3c 面霜 173、Eleos Aromatique 紫色护手霜 75mL 45（原表标可作伴手礼）、天竺葵沐浴露 500mL 65、Aurner 香水 50mL 240（单位澳元）。\n【Lululemon】09:30–19:00。原表比较三家：Pitt St 店人最多挤不开；George St 店两层、货品尺码更全；Bondi 店最好逛但不顺路。原表记 Scuba 帽衫／Define 外套 169、Softstreme 与 Groove 长裤 149、Align 瑜伽裤 119。\n【UGG】St Martins Tower 旁的 the ugg shop，有中文导购，认准绿色三角标；原表提醒 UGG 是鞋品类名称、与美国 UGG 不同。DFO Homebush 可能更便宜但太远，原表标明不去。\n退税两条都来自原表：Aesop 满 300 澳元可退，务必要门店开 invoice 发票（顶部有 ABN 与发票号、开个人名下）；Lululemon 共用一个 ABN，多笔合计超 300 即可退，但要确认小票是原始 invoice 而非 reprint。\n营业时间与价格为原表笔记，未再核实。",
         "row": 337,
         "id": "2026-10-01-10",
         "tentative": true
@@ -752,7 +782,7 @@ export const days = [
         "title": "买伴手礼，整理行李",
         "type": "shop",
         "place": "Coles World Square Sydney",
-        "note": "备份照片、整理发票与行李。\n次日补给（按10/2悉尼市区日推算）：早餐酒店 07:00 提供；白天海港→植物园→CBD 步行量大，备水和小食。\n伴手礼尽量今天在这里买齐 —— 10/2 傍晚 17:00 就要打包、称行李并整理退税材料，10/3 早上 06:15 退房不再有时间。原表伴手礼清单（Sunbites、a2 奶粉、LeSnak、Wallaby 巧克力、木瓜膏、T2、TimTam、shortbread、Swisse、Blackmores）见本行原备注，并注明 Coles 综合价格优于 Chemist Warehouse。\n退税要用的发票单独收好，原表提醒提前在 TRS App 录入发票与航班信息。",
+        "note": "备份照片、整理发票与行李。\n次日补给（按10/2悉尼市区日推算）：早餐酒店 07:00 提供；白天海港→植物园→CBD 步行量大，备水和小食。\n伴手礼尽量今天在这里买齐 —— 10/2 傍晚 17:00 就要打包、称行李并整理退税材料，10/3 早上 06:15 退房不再有时间。原表伴手礼清单（Sunbites、a2 奶粉、LeSnak、Wallaby 巧克力、木瓜膏、T2、TimTam、shortbread、Swisse、Blackmores）见本行原备注，并注明 Coles 综合价格优于 Chemist Warehouse。\n木瓜膏认 Lucas' Papaw Ointment（原表写 real pawpaw，并注明悉尼 460 店铺也有）；Swisse 与 Blackmores 保健品同在这里，原表提示 Coles 比 Chemist Warehouse 划算。\n10/03 是周六，原表给多家店标了「周六休息」—— 那天是返程日，06:15 就退房，买不了任何东西。所有伴手礼最晚 10/02 买完。\n咖啡豆 Campos Colombia 也在这里买：Coles／Woolworths 常有，比精品店便宜，送人可多备几包。精品豆（维妈的 McIver's、Market Lane，Fitzroy 的 Jasper）已在墨尔本买过，这里只补超市款。\n退税要用的发票单独收好，原表提醒提前在 TRS App 录入发票与航班信息。",
         "row": 363,
         "id": "2026-10-01-12"
       }

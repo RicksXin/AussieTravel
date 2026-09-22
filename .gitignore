@@ -7,3 +7,4 @@ project.private.config.json
 .env.local
 artifacts/
 *.log
+.playwright-mcp/

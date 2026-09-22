@@ -54,7 +54,7 @@ test('revision 946 has new flights, reservations and no retired execution routes
  assert.ok(!days[7].events.some(e=>/Coogee|Watsons/.test(e.place||'')))
  assert.equal(days[3].events[0].time,null)
  assert.equal(days[3].events[0].place,"206 A'Beckett St Melbourne")
- assert.equal(days[4].events.length,8) // 7 imported plans plus the added resupply stop
+ assert.equal(days[4].events.length,10) // 7 imported plans plus resupply, Jasper Coffee and the campus shop
  assert.ok(days[7].events.every(e=>e.tentative))
  const calendar=ics(days).replace(/\r\n /g,'')
  for(const e of days.flatMap(d=>d.events).filter(e=>e.tentative)) assert.ok(!calendar.includes(`UID:${e.id}@`))
